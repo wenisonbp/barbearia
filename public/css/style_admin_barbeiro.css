@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+    background-color: #1f374f;
+}
+
+#nav_primary{
+    background-color: #17212a !important;
+    color: white;
+}
+#nav_primary > a{
+    color: white !important;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: white !important;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: white !important; 
+}
+
+.card{
+    border: none !important;
+    border-radius: none !important;
+}
+
+#my_cads .card:hover{
+    background-color: rgb(219, 213, 213);
+}
+
+#my_cads{
+    background-image: url(/barbearia/public/img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+}
+
+#content{
+    padding-bottom: 55px;
+    padding-top: 55px;
+}
+
+#conteudo_02{
+    background-image: url(/barbearia/public/img/div_02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#contato_usuario{
+    background-image: url(/barbearia/public/img/contato.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#contato_usuario > div .card{
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;   
+}
+
+.navbar-toggler{
+    background-color: white;
+}
+
+.navbar-collapse{
+    background-color: #17212a;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
