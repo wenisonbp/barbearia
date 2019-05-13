@@ -33,7 +33,7 @@
   <body class="d-flex flex-column">
     <div id="header">
         <nav id="nav_primary" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <a class="btn_toggle_menu pr-5"></a>
+            <a class="btn_toggle_menu pr-5" style="display: none;"></a>
             <a class="navbar-brand mr-auto" href="/barbearia">
                 <img src="/barbearia/public/icon/android-icon-192x192.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 Barbearia Black Hair
