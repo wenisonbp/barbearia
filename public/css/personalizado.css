@@ -1,0 +1,12 @@
+#calendar {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.visualizar{
+	display: block;
+}
+
+.form{
+	display: none;
+}
