@@ -44,8 +44,8 @@
         <nav id="nav_primary" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <a id="btn_toggle_menu" class="pr-3" style="display: none;"><i id="btn_toggle_menu_icon" class="fas fa-bars"></i></a>
             <a class="navbar-brand mr-auto" href="/barbearia/cliente/inicio">
-                <img src="/barbearia/public/icon/android-icon-192x192.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                Barbearia Black Hair
+                <img src="/barbearia/public/img/logo_qbarber.png" width="100px" class="d-inline-block align-top" alt="">
+                Olá Cliente, seja bem vindo!
             </a>
             <a href="#" class="btn btn-warning btn-sm"><i class="fas fa-door-open" style="color: #17212a;"></i></a>
         </nav>  
