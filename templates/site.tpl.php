@@ -53,7 +53,8 @@
                     <a class="nav-link" href="/barbearia/quem_somos">Quem somos</a>
                 </li>
                 </ul>
-                <a href="#" class="btn btn-success btn-sm">Entrar</a>
+                <a href="#" class="btn btn-warning btn-sm mr-3">Cadastre-se</a>
+                <a href="/barbearia/login" class="btn btn-success btn-sm">Entrar</a>
             </div>
         </nav>      
     </div>
