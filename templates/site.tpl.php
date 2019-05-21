@@ -25,14 +25,14 @@
     <meta name="msapplication-TileImage" content="/barbearia/public/icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Sua Barbearia Back Hair</title>
+    <title>QBarber</title>
 </head>
 <body>
     <div id="main">
         <nav id="nav_primary" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/barbearia">
                 <img src="/barbearia/public/icon/android-icon-192x192.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                Barbearia Black Hair
+                Mundo QBarber
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -53,7 +53,8 @@
                     <a class="nav-link" href="/barbearia/quem_somos">Quem somos</a>
                 </li>
                 </ul>
-                <a href="#" class="btn btn-success btn-sm">Entrar</a>
+                <a href="#" class="btn btn-success btn-sm mr-3">Área Cliente</a>
+                <a href="#" class="btn btn-success btn-sm">Área Barbeiro</a>
             </div>
         </nav>      
     </div>
