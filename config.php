@@ -18,7 +18,7 @@ define('DEBUG', true);
 define('DB_SERVER', 'localhost:3308');
 define('DB_USER', 'wenison_bd');
 define('DB_PASSWD', '349709643040@');
-define('DB_NAME', 'cadastro');
+define('DB_NAME', 'qbarber');
 
 //$conn = new mysqli('sv2kprel5:3307','atendimento_owner', 'atendimento', 'atendimento');
 

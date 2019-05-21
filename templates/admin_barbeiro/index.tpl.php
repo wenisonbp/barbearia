@@ -8,7 +8,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/barbearia/public/fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="/barbearia/public/fontawesome/css/all.css">
-    <link rel="stylesheet" href="/barbearia/public/pnotify/pnotify.custom.min.css">
     <link rel="stylesheet" href="/barbearia/public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/barbearia/public/css/style_admin_cliente.css">
 
@@ -71,15 +70,9 @@
 
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="/barbearia/public/pnotify/pnotify.custom.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/barbearia/public/js/jquery.mask.min.js"></script>
     <script type="text/javascript" src="/barbearia/public/js/templates.js"></script>
-    
-    <script>
-        <?php flash(); ?>
-    </script>
-
     <script type="text/javascript">
         $('#btn_toggle_menu').on("click", function(){ 
             $('#btn_toggle_menu_icon').toggleClass('fa-times');     
@@ -155,6 +148,3 @@
 
 </body>
 </html>
-
-
-

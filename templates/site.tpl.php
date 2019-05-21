@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/barbearia/public/pnotify/pnotify.custom.min.css">
     <link rel="stylesheet" href="/barbearia/public/css/style.css">
     <link rel="apple-touch-icon" sizes="57x57" href="/barbearia/public/icon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/barbearia/public/icon/apple-icon-60x60.png">
@@ -53,8 +54,8 @@
                     <a class="nav-link" href="/barbearia/quem_somos">Quem somos</a>
                 </li>
                 </ul>
-                <a href="#" class="btn btn-success btn-sm mr-3">Área Cliente</a>
-                <a href="#" class="btn btn-success btn-sm">Área Barbeiro</a>
+                <a href="/barbearia/cliente/auth/login" class="btn btn-success btn-sm mr-3">Área Cliente</a>
+                <a href="/barbearia/barbeiro/auth/login" class="btn btn-warning btn-sm">Área Barbeiro</a>
             </div>
         </nav>      
     </div>
@@ -72,7 +73,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/barbearia/public/js/jquery.mask.min.js"></script>
+    <script src="/barbearia/public/pnotify/pnotify.custom.min.js"></script>
     <script type="text/javascript" src="/barbearia/public/js/templates.js"></script>
+    <script>
+        <?php flash(); ?>
+    </script>
+
 
     <!-- <script type="text/javascript" src="/barbearia/public/js/templates.js"></script> -->
 </body>

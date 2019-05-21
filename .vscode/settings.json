@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/SQL": true,
+        "**/.vscode": true
+    }
+}
