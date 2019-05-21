@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-body clearfix">
                 <h4 class="card-title">Login</h4>
-                <form method="post" action="/autenticar">
+                <form method="post" action="">
                     <div class="form-group">
                         <label for="authLogin">Usuário</label>
                         <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Informe seu usuário">

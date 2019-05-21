@@ -1,10 +1,11 @@
 <?php 
 class Database
 {
-	private db_host = "localhost"; 
-	private db_user = "root"; 
-	private db_pass = ""; 
-	private db_name = "qbarber"; 
+	private $db_host = "localhost"; 
+	private $db_user = "root"; 
+	private $db_pass = ""; 
+	private $db_name = "qbarber";
+	private $con;
 
 	public function connect () {
         if (!$this->con) {
@@ -23,6 +24,10 @@ class Database
 		} else {
 			return true; 
 		}
+	}
+
+	public function getCon () {
+		return $this->con;
 	}
 
 	public function disconnect() {
