@@ -1,5 +1,5 @@
 <div class="p-2 pt-3 text-center">
-    <h4>Barbearia Corte 5 Estrelas</h4>
+    <h4><?php echo $data['dados_barbearia'][0]['nome']; ?></h4>
 </div>
 
 <div class="row h-auto">
@@ -31,118 +31,42 @@
 
 </div>
 
-
 <div class="pt-3 pl-3">
     <h4>Fazer uma reserva</h4>
     <label class="font-weight-bold" for="">Sobre:</label>
-    <div>Informações sobre a Barbearia...</div>
+    <div><?php echo $data['dados_barbearia'][0]['informacao']; ?></div>
     <hr>
 </div>
 
 <!-- COMBOS DISPONÍVEIS -->
 
+<?php 
+
+foreach ($data_3['tipos_servicos'] as $tipos_servicos) : ?>
 <div class="categoria_serviços">
-    <h5 class="pl-5">Combo</h5>
+    <h5 class="pl-5"><?php echo $tipos_servicos['tipo']; ?></h5>
+
+    <?php foreach ($data_2['servicos_barbearia'] as $servicos_barbearia) : 
+    
+    if ($servicos_barbearia['tipo'] == $tipos_servicos['tipo']) { ?>
+
     <div class="servico_prestado">
         <div class="row">
             <div class="col-3">
-                Corte + Barba
+               <?php echo $servicos_barbearia['servico'];?>
             </div>
             <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
-                <span class="inf_servico_prestado">1h</span>
-                <span class="inf_servico_prestado">R$ 15,00</span>
+                <span class="inf_servico_prestado"><?php echo date('i', strtotime($servicos_barbearia['tempo'])) . 'm';?></span>
+                <span class="inf_servico_prestado"><?php echo 'R$ ' . $servicos_barbearia['preco'];?></span>
                 <button type="button" class="btn_padrao">Reservar</button>
             </div>
         </div>
     </div>
-    <div class="servico_prestado">
-        <div class="row">
-            <div class="col-3">
-                Corte + Barba + Sobrancelha
-            </div>
-            <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
-                <span class="inf_servico_prestado">30m</span>
-                <span class="inf_servico_prestado">R$ 15,00</span>
-                <button type="button" class="btn_padrao">Reservar</button>
-            </div>
-        </div>
-    </div>
+
+    <?php }; endforeach; ?>
+
 </div>
-
-<!-- CABELOS DISPONÍVEIS -->
-
-<div class="categoria_serviços">
-    <h5 class="pl-5">Cabelos</h5>
-    <div class="servico_prestado">
-        <div class="row">
-            <div class="col-3">
-                Corte
-            </div>
-            <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
-                <span class="inf_servico_prestado">1h</span>
-                <span class="inf_servico_prestado">R$ 15,00</span>
-                <button type="button" class="btn_padrao">Reservar</button>
-            </div>
-        </div>
-    </div>
-    <div class="servico_prestado">
-        <div class="row">
-            <div class="col-3">
-                Black Power
-            </div>
-            <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
-                <span class="inf_servico_prestado">30m</span>
-                <span class="inf_servico_prestado">R$ 15,00</span>
-                <button type="button" class="btn_padrao">Reservar</button>
-            </div>
-        </div>
-    </div>
-    <div class="servico_prestado">
-        <div class="row">
-            <div class="col-3">
-                Selagem
-            </div>
-            <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
-                <span class="inf_servico_prestado">20m</span>
-                <span class="inf_servico_prestado">R$ 15,00</span>
-                <button type="button" class="btn_padrao">Reservar</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- BARBAS DISPONÍVEIS -->
-
-<div class="categoria_serviços">
-    <h5 class="pl-5">Barbas</h5>
-    <div class="servico_prestado">
-        <div class="row">
-            <div class="col-3">
-                Barba
-            </div>
-            <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
-                <span class="inf_servico_prestado">1h</span>
-                <span class="inf_servico_prestado">R$ 15,00</span>
-                <button type="button" class="btn_padrao">Reservar</button>
-            </div>
-        </div>
-    </div>
-    <div class="servico_prestado">
-        <div class="row">
-            <div class="col-3">
-                Barbaterapia
-            </div>
-            <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
-                <span class="inf_servico_prestado">30m</span>
-                <span class="inf_servico_prestado">R$ 15,00</span>
-                <button type="button" class="btn_padrao">Reservar</button>
-            </div>
-        </div>
-    </div>
-</div>
-
+<?php endforeach; ?>
 
 
 <div class="pt-3 pl-3">

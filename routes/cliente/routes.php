@@ -5,11 +5,15 @@ auth_protection();
 include __DIR__ . '/db.php';
 
 if ($params = resolve('/cliente/inicio.*')) {
-    render('admin_cliente/conteudo/inicio', 'admin_cliente/index');
+    $lista_barbearias = $lista_barbearias();
+    render('admin_cliente/conteudo/inicio', 'admin_cliente/index', ['lista_barbearias' => $lista_barbearias]);
 }
 
-elseif ($params = resolve('/cliente/solicitacao.*')) {
-    render('admin_cliente/conteudo/solicitacao', 'admin_cliente/index');
+elseif ($params = resolve('/cliente/solicitacao/([a-z0-9]{1,100})')) {
+    $dados_barbearia = $unica_barbearia($params[1]);
+    $servicos_barbearia = $servicos_barbearia($params[1]);
+    $tipos_servicos = $tipos_servicos($params[1]);
+    render('admin_cliente/conteudo/solicitacao', 'admin_cliente/index', ['dados_barbearia' => $dados_barbearia], ['servicos_barbearia' => $servicos_barbearia], ['tipos_servicos' => $tipos_servicos]);
 }
 
 elseif ($params = resolve('/cliente/meus_agendamentos.*')) {

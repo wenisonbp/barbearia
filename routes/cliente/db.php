@@ -1,5 +1,70 @@
 <?php
 
+// Listar Barbearias na páginaa inicio
+
+$lista_barbearias = function () use ($conn) {
+
+    $sql = 'SELECT * FROM barbearia';
+    $stmt = $conn->prepare($sql);
+    //$stmt->bind_param('ss', $grupo, $indicador);
+    $stmt->execute();
+
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+
+$unica_barbearia = function ($id_barbearia) use ($conn) {
+
+    $sql = 'SELECT * FROM barbearia WHERE id_barbearia = ?';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $id_barbearia);
+    $stmt->execute();
+
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+
+$servicos_barbearia = function ($id_barbearia) use ($conn) {
+
+    $sql = 'SELECT * FROM servico WHERE id_barbearia = ?';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $id_barbearia);
+    $stmt->execute();
+
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+
+$tipos_servicos = function ($id_barbearia) use ($conn) {
+
+    $sql = 'SELECT DISTINCT tipo FROM servico WHERE id_barbearia = ?';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $id_barbearia);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Realizar autenticação do cliente
+
 $login = function () use ($conn) {
     $usuario = filter_input(INPUT_POST, 'usuario');
     $senha = filter_input(INPUT_POST, 'senha');

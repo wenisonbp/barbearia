@@ -26,21 +26,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr onclick="location.href = 'solicitacao'" style="cursor: pointer;">
-                <td>Novo Visual</td>
-                <td>5 km</td>
-                <td><i class="fas fa-star text-warning"></i> 4,5</td>
-            </tr>
-            <tr onclick="location.href = 'solicitacao'" style="cursor: pointer;">
-                <td>Corte 5 Estrelas</td>
-                <td>4,5 km</td>
-                <td><i class="fas fa-star text-warning"></i> 4</td>
-            </tr>
-            <tr onclick="location.href = 'solicitacao'" style="cursor: pointer;">
-                <td>Forte Barba</td>
-                <td>3,2 km</td>
-                <td><i class="fas fa-star text-warning"></i> 5</td>
-            </tr>
+            <?php foreach ($data['lista_barbearias'] as $lista_barbearias) : ?>
+              <tr onclick="location.href = 'solicitacao/<?php echo $lista_barbearias['id_barbearia']; ?>'" style="cursor: pointer;">
+                  <td><?php echo $lista_barbearias['nome']; ?></td>
+                  <td>
+                      <?php echo 'teste' ?></a>
+                  </td>
+                  <td>
+                      <?php echo 'teste'; ?></a>
+                  </td>
+              </tr>
+            <?php endforeach; ?>
         </tbody>
         </table>
     </div>

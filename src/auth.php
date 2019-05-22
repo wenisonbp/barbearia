@@ -12,10 +12,7 @@ function auth_protection() {
         header('location: /barbearia/cliente/auth/login');
         die();
     }
-    // elseif (!$user and !resolve('/barbeiro/auth.*')) {
-    //     header('location: /barbearia/cliente/auth/login');
-    //     die();
-    // }
+
 }
 
 
