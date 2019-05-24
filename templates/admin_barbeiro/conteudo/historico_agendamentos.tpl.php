@@ -1,7 +1,7 @@
 <h3 class="text-center mb-5">Veja abaixo o histórico de seus agendamentos</h3>
 
 <div class="table-responsive">
-    <table class="table table-hover">
+    <table class="table table-hover text-center">
     <thead>
         <tr>
         <th scope="col">#</th>

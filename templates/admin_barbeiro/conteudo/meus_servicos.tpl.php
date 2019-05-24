@@ -11,7 +11,8 @@
             <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
                 <span class="inf_servico_prestado">Teste</span>
                 <span class="inf_servico_prestado">Teste</span>
-                <button type="button" class="btn_padrao">Editar</button>
+                <a href="#" class="btn_padrao">Editar</a>
+                <a href="#" class="btn_padrao_remover">Remover</a>
             </div>
         </div>
     </div>
@@ -23,7 +24,8 @@
             <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
                 <span class="inf_servico_prestado">Teste</span>
                 <span class="inf_servico_prestado">Teste</span>
-                <button type="button" class="btn_padrao">Editar</button>
+                <a href="#" class="btn_padrao">Editar</a>
+                <a href="#" class="btn_padrao_remover">Remover</a>
             </div>
         </div>
     </div>
@@ -41,22 +43,24 @@
             <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
                 <span class="inf_servico_prestado">Teste</span>
                 <span class="inf_servico_prestado">Teste</span>
-                <button type="button" class="btn_padrao">Editar</button>
+                <a href="#" class="btn_padrao">Editar</a>
+                <a href="#" class="btn_padrao_remover">Remover</a>
             </div>
         </div>
     </div>
 </div>
 
 
-<div class="pt-3 pl-3">
-    <hr>
-    <label class="font-weight-bold" for="">Informações adicionais:</label>
-    <div>Teste</div>
-    <hr>
-    <label class="font-weight-bold" for="">Onde fica:</label>
-    <div>Teste</div>
-    <hr>
-    <!-- <label class="font-weight-bold" for="">Formas de pagamento:</label>
-    <div>Métodos de pagamentos da Barbearia...</div>
-    <hr> -->
-</div>
+<!-- Lista de serviços -->
+
+
+<!-- Combo
+Cabelo
+Barba
+Unhas
+Sobrancelhas e Cílios
+Estética
+Massagem
+Maquiagem
+Spa
+Personal -->
