@@ -1,69 +1,47 @@
-html, body {
-    height: 100%;
-    background-color: #1f374f;
+#main {
+    flex: 1;
 }
+
+#content {
+    /* padding-top: 20px; */
+    padding-right: 0px;
+    padding-left: 0px;
+    flex: 1;
+    max-width: 100%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 55px;
+    margin-top: 15px;
+}
+
+@media (max-width: 794px) {
+    #content {
+        flex: 100% !important;
+        max-width: 100% !important;
+        padding: 0px !important;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
 
 #nav_primary{
     background-color: #17212a !important;
     color: white;
 }
 #nav_primary > a{
-    color: white !important;
+    color: white;
 }
 
 .navbar-light .navbar-nav .active>.nav-link {
-    color: white !important;
+    color: white;
 }
 
 
 .navbar-light .navbar-nav .nav-link {
-    color: white !important; 
+    color: white; 
 }
 
-.card{
-    border: none !important;
-    border-radius: none !important;
-}
-
-#my_cads .card:hover{
-    background-color: rgb(219, 213, 213);
-}
-
-#my_cads{
-    background-image: url(/barbearia/public/img/fundo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;    
-}
-
-#content{
-    padding-bottom: 55px;
-    padding-top: 55px;
-}
-
-#conteudo_02{
-    background-image: url(/barbearia/public/img/div_02.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-#contato_usuario{
-    background-image: url(/barbearia/public/img/contato.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: 0px;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-}
-
-#contato_usuario > div .card{
-    background-color: rgba(0, 0, 0, 0.678);
-    color: white;   
-}
 
 .navbar-toggler{
     background-color: white;
@@ -75,3 +53,195 @@ html, body {
     left: 0;
     right: 0;
 }
+
+#header{
+    padding-bottom: 55px;
+}
+
+@media (max-width: 795px) {
+    #header{
+        padding-bottom: 76px;
+    }
+}
+
+.row{
+    height: 100%;
+    max-width: 100%;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+
+/* MENU */
+
+
+/* @import'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'; */
+body,html{
+    margin: 0;
+    page-break-after: 0;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    /* background-color: #1f374f; */
+}
+
+.sidebar{
+    float: left;
+    width: 100px;
+    height: 100%;
+    background-color: #2c3e50;
+    overflow: hidden;
+    /* transition: 0.8s all; */
+}
+
+
+@media (max-width: 795px) {
+    .sidebar{
+        margin-left: -100px;
+    }
+}
+
+.side{
+    margin-left: 0;
+}
+
+.sidebar ul{
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li{
+    list-style: none;
+}
+
+.sidebar ul a li i{
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    /* transition: 0.6s all; */
+    margin-bottom: 5px;
+}
+
+.sidebar ul a {
+    text-decoration: none;
+    color: white;
+    height: 90px;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    /* transition: 0.6s all; */
+    padding: 8px;
+}
+
+.sidebar ul a:hover{
+    background: #34495e;
+}
+
+#btn_toggle_menu{
+    float: left;
+    padding: 0 10px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-family: Ionicons;
+    cursor: pointer;
+}
+
+@media (max-width: 795px) {
+    #btn_toggle_menu{
+        display: block !important;
+    }
+}
+
+/* #btn_toggle_menu_icon {
+    transition: 0.6s all;
+}
+
+#main{
+    transition: 0.8s all;
+} */
+
+
+.main_left {
+    flex: 1;
+    margin-left: 100px;
+    width: 100%;
+    /* transition: 0.6s all; */
+}
+
+/* INFORMAÇÕES SOBRE A BARBEARIA */
+
+.categoria_serviços{
+    background-color: #F6F6F6;padding: 9px;margin-bottom: 25px;
+}
+.servico_prestado{
+    background-color: white;padding: 5px;margin-bottom: 8px;margin-left: 5px;margin-right: 5px;
+}
+.inf_servico_prestado{
+    margin-right: 8px;font-size: 13px;
+}
+.servico_prestado_detalhe{
+    flex: 1;max-width: 100%;font-size: 13px;
+}
+.btn_padrao{
+    background-color: #2c3e50; border: none; padding: 2px; padding-left: 5px; padding-right: 5px; font-size: 13px; color: white;
+}
+.btn_padrao:hover{
+    background-color: #456281; color: rgb(255, 255, 255); border: none !important;
+}
+.btn_padrao_remover{
+    background-color: #cf1818; border: none; padding: 2px; padding-left: 5px; padding-right: 5px; font-size: 13px; color: white;
+}
+.btn_padrao_remover:hover{
+    background-color: #cf3636; color: rgb(255, 255, 255); border: none; cursor: pointer;
+}
+
+button:focus{
+    outline: thin dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+    }
+    button:focus {
+     outline: thin dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+    }
+button{
+    cursor: pointer;
+}
+
+@media (min-width: 795px) {
+    .img_favoritos{
+        width: 90%;
+    }
+}
+@media (max-width: 794px) {
+    .img_favoritos{
+        width: 100%;
+    }
+}
+@media (min-width: 1200px) {
+    .favoritos_conteudo{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+/* #solicitacao_agendamento{
+    max-width: 80%;
+    height: 100%;
+}
+@media (max-width: 794px) {
+    #solicitacao_agendamento{
+        max-width: 100%;
+    }
+}
+#modal_solicitacao_agendamento{
+    padding-left: 2px;
+    padding-right: 2px !important;
+}
+.solicitacao_agendamento{
+    height: 100% !important;
+} */

@@ -54,8 +54,9 @@
                     <a class="nav-link" href="/barbearia/quem_somos">Quem somos</a>
                 </li>
                 </ul>
-                <a href="/barbearia/cliente/auth/login" class="btn btn-success btn-sm mr-3">Área Cliente</a>
-                <a href="/barbearia/barbeiro/auth/login" class="btn btn-warning btn-sm">Área Barbeiro</a>
+                <a href="/barbearia/realizar_cadastro" style="text-decoration: none; color: white;" class="mr-3">Cadastrar-se</a>
+                <a href="/barbearia/cliente/auth/login" class="btn btn-success btn-sm mr-3">Login Cliente</a>
+                <a href="/barbearia/barbeiro/auth/login" class="btn btn-warning btn-sm">Login Barbeiro</a>
             </div>
         </nav>      
     </div>
@@ -74,11 +75,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/barbearia/public/js/jquery.mask.min.js"></script>
     <script src="/barbearia/public/pnotify/pnotify.custom.min.js"></script>
-    <script type="text/javascript" src="/barbearia/public/js/templates.js"></script>
+    <script type="text/javascript" src="/barbearia/public/js/templates_site.js"></script>
     <script>
         <?php flash(); ?>
     </script>
-
 
     <!-- <script type="text/javascript" src="/barbearia/public/js/templates.js"></script> -->
 </body>

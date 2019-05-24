@@ -34,7 +34,7 @@
 <div class="pt-3 pl-3">
     <h4>Fazer uma reserva</h4>
     <label class="font-weight-bold" for="">Sobre:</label>
-    <div><?php echo $data['dados_barbearia'][0]['informacao']; ?></div>
+    <div><?php echo $data['dados_barbearia'][0]['sobre']; ?></div>
     <hr>
 </div>
 
@@ -72,14 +72,12 @@ foreach ($data_3['tipos_servicos'] as $tipos_servicos) : ?>
 <div class="pt-3 pl-3">
     <hr>
     <label class="font-weight-bold" for="">Informações adicionais:</label>
-    <div>Mais informações sobre a Barbearia...</div>
+    <div><?php echo $data['dados_barbearia'][0]['informacao_adicional']; ?></div>
     <hr>
     <label class="font-weight-bold" for="">Onde fica:</label>
-    <div>Informar endereço da Barbearia...</div>
+    <div><?php echo $data['dados_barbearia'][0]['endereco']; ?></div>
     <hr>
-    <label class="font-weight-bold" for="">Formas de pagamento:</label>
+    <!-- <label class="font-weight-bold" for="">Formas de pagamento:</label>
     <div>Métodos de pagamentos da Barbearia...</div>
-    <hr>
+    <hr> -->
 </div>
-
-<div id='calendar'></div>

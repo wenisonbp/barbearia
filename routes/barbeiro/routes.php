@@ -5,23 +5,27 @@ auth_protection();
 include __DIR__ . '/db.php';
 
 if ($params = resolve('/barbeiro/inicio.*')) {
-    render('admin_barbeiro/conteudo/inicio', 'admin_barbeiro/index');
+    render('admin_barbeiro/conteudo/informacoes_cadastro', 'admin_barbeiro/index');
 }
 
-elseif ($params = resolve('/barbeiro/solicitacao.*')) {
-    render('admin_barbeiro/conteudo/solicitacao', 'admin_barbeiro/index');
+elseif ($params = resolve('/barbeiro/meus_servicos.*')) {
+    render('admin_barbeiro/conteudo/meus_servicos', 'admin_barbeiro/index');
 }
 
-elseif ($params = resolve('/barbeiro/meus_agendamentos.*')) {
-    render('admin_barbeiro/conteudo/meus_agendamentos', 'admin_barbeiro/index');
+elseif ($params = resolve('/barbeiro/editar_servico.*')) {
+    render('admin_barbeiro/conteudo/editar_servico', 'admin_barbeiro/index');
 }
 
-elseif ($params = resolve('/barbeiro/andamento_pedido.*')) {
-    render('admin_barbeiro/conteudo/andamento_pedido', 'admin_barbeiro/index');
+elseif ($params = resolve('/barbeiro/cadastrar_servico.*')) {
+    render('admin_barbeiro/conteudo/cadastrar_servico', 'admin_barbeiro/index');
 }
 
-elseif ($params = resolve('/barbeiro/meus_favoritos.*')) {
-    render('admin_barbeiro/conteudo/meus_favoritos', 'admin_barbeiro/index');
+elseif ($params = resolve('/barbeiro/acompanhar_agendamento.*')) {
+    render('admin_barbeiro/conteudo/acompanhar_agendamento', 'admin_barbeiro/index');
+}
+
+elseif ($params = resolve('/barbeiro/historico_agendamentos.*')) {
+    render('admin_barbeiro/conteudo/historico_agendamentos', 'admin_barbeiro/index');
 }
 
 elseif (resolve('/barbeiro/auth/login')) {
