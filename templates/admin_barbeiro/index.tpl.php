@@ -53,10 +53,11 @@
         <div class="row">
             <div class="sidebar pt-3">
                 <ul>
-                    <a href="/barbearia/barbeiro/inicio"><li><i class="fas fa-address-book"></i></li>Informações do Cadastro</a>
-                    <a href="/barbearia/barbeiro/acompanhar_agendamento"><li><i class="fas fa-chalkboard-teacher"></i></li>Acompanhar Agendamentos</a>
-                    <a href="/barbearia/barbeiro/historico_agendamentos"><li><i class="far fa-calendar-alt"></i></li>Histórico Agendamentos</a>
-                    <a href="/barbearia/barbeiro/meus_servicos"><li><i class="fas fa-server"></i></li>Meus Serviços</a>
+                    <?php $params = resolve('/barbeiro/inicio/([a-z0-9]{1,100})'); $id = $params[1]; ?>
+                    <a href="/barbearia/barbeiro/inicio/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="fas fa-address-book"></i></li>Informações do Cadastro</a>
+                    <a href="/barbearia/barbeiro/acompanhar_agendamento/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="fas fa-chalkboard-teacher"></i></li>Acompanhar Agendamentos</a>
+                    <a href="/barbearia/barbeiro/historico_agendamentos/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="far fa-calendar-alt"></i></li>Histórico Agendamentos</a>
+                    <a href="/barbearia/barbeiro/meus_servicos/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="fas fa-server"></i></li>Meus Serviços</a>
                 </ul>
             </div>
 

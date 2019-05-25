@@ -27,8 +27,8 @@
         </thead>
         <tbody>
             <?php foreach ($data['lista_barbearias'] as $lista_barbearias) : ?>
-              <tr onclick="location.href = 'solicitacao/<?php echo $lista_barbearias['id_barbearia']; ?>'" style="cursor: pointer;">
-                  <td><?php echo $lista_barbearias['nome']; ?></td>
+              <tr onclick="location.href = '/barbearia/cliente/solicitacao/<?php echo $_SESSION['id_cliente'];?>/<?php echo $lista_barbearias['id_barbearia']; ?>'" style="cursor: pointer;">
+                  <td><?php echo $lista_barbearias['nome_barbearia']; ?></td>
                   <td>
                       <?php echo 'teste' ?></a>
                   </td>

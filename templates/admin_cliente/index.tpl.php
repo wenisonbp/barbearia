@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="/barbearia/public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/barbearia/public/css/style_admin_cliente.css">
 
-    <link href='/barbearia/public/css/fullcalendar.min.css' rel='stylesheet' />
-    <link href='/barbearia/public/css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-    <link href='/barbearia/public/css/personalizado.css' rel='stylesheet' />
+    <!-- <link href='/barbearia/public/css/fullcalendar.min.css' rel='stylesheet' />
+    <link href='/barbearia/public/css/fullcalendar.print.min.css' rel='stylesheet' media='print' /> -->
+    <!-- <link href='/barbearia/public/css/personalizado.css' rel='stylesheet' /> -->
     <script src='/barbearia/public/js/jquery.min.js'></script>
-    <script src='/barbearia/public/js/moment.min.js'></script>
+    <!-- <script src='/barbearia/public/js/moment.min.js'></script>
     <script src='/barbearia/public/js/fullcalendar.min.js'></script>
-    <script src='/barbearia/public/locale/pt-br.js'></script>
+    <script src='/barbearia/public/locale/pt-br.js'></script> -->
 
 
     <link rel="apple-touch-icon" sizes="57x57" href="/barbearia/public/icon/apple-icon-57x57.png">
@@ -54,10 +54,10 @@
         <div class="row">
             <div class="sidebar pt-3">
                 <ul>
-                    <a href="/barbearia/cliente/inicio"><li><i class="fas fa-map-marker-alt"></i></li>Encontrar Barbearia</a>
-                    <a href="/barbearia/cliente/meus_agendamentos"><li><i class="far fa-calendar-alt"></i></li>Meus Agendamentos</a>
-                    <a href="/barbearia/cliente/meus_favoritos"><li><i class="far fa-bookmark"></i></li>Meus Favoritos</a>
-                    <a href=""><li><i class="fab fa-hubspot"></i></li>Como funciona</a>
+                    <a href="/barbearia/cliente/inicio/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="fas fa-map-marker-alt"></i></li>Encontrar Barbearia</a>
+                    <a href="/barbearia/cliente/meus_agendamentos/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="far fa-calendar-alt"></i></li>Meus Agendamentos</a>
+                    <a href="/barbearia/cliente/meus_favoritos/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="far fa-bookmark"></i></li>Meus Favoritos</a>
+                    <!-- <a href="/barbearia/cliente/meus_favoritos/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="fab fa-hubspot"></i></li>Como funciona</a> -->
                 </ul>
             </div>
 

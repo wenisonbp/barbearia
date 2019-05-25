@@ -79,7 +79,6 @@
     <script>
         <?php flash(); ?>
     </script>
-
-    <!-- <script type="text/javascript" src="/barbearia/public/js/templates.js"></script> -->
+    
 </body>
 </html>

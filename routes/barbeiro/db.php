@@ -26,6 +26,7 @@ $login = function () use ($conn) {
         if (!empty($senha)) {
             $_SESSION['auth'] = $user['login'];
             $_SESSION['name'] = $user['nome'];
+            $_SESSION['id_barbearia'] = $user['id_usuario'];
             return true;
         }
     }

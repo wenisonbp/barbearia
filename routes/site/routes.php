@@ -20,15 +20,17 @@ elseif ($params = resolve('/junte_se_a_nos')) {
 
 elseif ($params = resolve('/realizar_cadastro')){
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if ($cadastro_barbearia()) {
+        $id_barbearia = $cadastro_barbearia();
+        if ($id_barbearia) {
             flash('Cadastro com sucesso', 'success');
-            return header('location: /barbearia/barbeiro/inicio');
+            return header('location: /barbearia/barbeiro/inicio/' . $_SESSION['id_barbearia']);
         }
-        if ($cadastro_cliente()) {
+        $id_usario = $cadastro_cliente();
+        if ($id_usario) {
             flash('Cadastro com sucesso', 'success');
-            return header('location: /barbearia/cliente/inicio');
+            return header('location: /barbearia/cliente/inicio/' . $_SESSION['id_usario']);
         }
-        flash('Preencha todos os dados', 'error');
+        flash('Favor verificar os dados preenchidos', 'error');
     }
     render('site/cadastro', 'site');
 }

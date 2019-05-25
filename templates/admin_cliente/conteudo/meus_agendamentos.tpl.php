@@ -1,5 +1,36 @@
-<div class="text-white p-2">
+    
 
-    Agendamento - Teste
+    <h3 class="text-center mb-5">Veja abaixo o histórico de seus agendamentos</h3>
 
-</div>
+    <div class="table-responsive">
+        <table class="table table-hover text-body">
+        <thead>
+            <tr>
+                <th scope="col">Barbearia</th>
+                <th scope="col">Início</th>
+                <th scope="col">Fim</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($data['meus_agendamentos'] as $meus_agendamentos) : ?>
+            <tr>
+                <td>
+                    <?php echo $meus_agendamentos['nome_barbearia']; ?>
+                </td>
+                <td>
+                    <?php echo $meus_agendamentos['data'] . ' - ' . $meus_agendamentos['horario_inicio']; ?></a>
+                </td>
+                <td>
+                    <?php echo $meus_agendamentos['data'] . ' - ' . $meus_agendamentos['horario_fim']; ?></a>
+                </td>
+                <td>
+                    <?php echo $meus_agendamentos['status']; ?></a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+        </table>
+    </div>
+
+
