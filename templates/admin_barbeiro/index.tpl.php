@@ -46,7 +46,7 @@
             <a class="navbar-brand mr-auto" href="/barbearia/cliente/inicio">
                 <img src="/barbearia/public/img/logo_qbarber.png" width="100px" class="d-inline-block align-top" alt="">
             </a>
-            <a href="/barbearia/cliente/auth/logout" class="btn btn-warning btn-sm"><i class="fas fa-door-open" style="color: #17212a;"></i></a>
+            <a href="/barbearia/barbeiro/auth/logout" class="btn btn-warning btn-sm"><i class="fas fa-door-open" style="color: #17212a;"></i></a>
         </nav>  
     </div>
     <div id="main">

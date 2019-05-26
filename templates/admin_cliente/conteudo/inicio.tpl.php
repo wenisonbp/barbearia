@@ -1,8 +1,10 @@
 <div class="pt-4 pl-1 pr-1">
-    <h3 class="text-center text-body">Faça a busca da Barbearia...</h3>
+    <div class="p-3 text-center" style="background-color: #F6F6F6;">
+        <h4>Faça a busca da Barbearia... <i class="fas fa-map-marker-alt"></i></h4>
+    </div>
+    <hr>
     <form class="p-3">
-        <div class="form-row align-items-center">
-
+        <div class="form-row justify-content-center">
             <div class="input-group col-10 col-md-10 my-1">
                 <div class="input-group-prepend" for="busca">
                     <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>

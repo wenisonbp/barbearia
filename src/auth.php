@@ -1,27 +1,45 @@
 <?php
 
-function get_user() {
-
-    return $_SESSION['auth'] ?? null;
+function get_user_cliente() {
+    return $_SESSION['id_cliente'] ?? null;
 }
 
-function auth_protection() {
-    $user = get_user();
 
-    if (!$user and !resolve('/cliente/auth.*') and !resolve('/barbeiro/auth.*')) {
+function get_user_barbeiro() {
+    return $_SESSION['id_barbearia'] ?? null;
+}
+
+
+
+function auth_protection_login() {
+
+    $id_cliente = get_user_cliente();
+    $id_barbearia = get_user_barbeiro();
+
+    if (!$id_cliente and !resolve('/cliente/auth.*') and resolve('/cliente/.*')) {
         header('location: /barbearia/cliente/auth/login');
+        die();
+    }
+
+    if (!$id_barbearia and !resolve('/barbeiro/auth.*') and resolve('/barbeiro/.*')) {
+        header('location: /barbearia/barbeiro/auth/login');
         die();
     }
 
 }
 
 
-function logout() {
-    unset($_SESSION['auth']);
-    unset($_SESSION['name']);
+
+function logout_cliente() {
     unset($_SESSION['id_cliente']);
-    unset($_SESSION['id_barbearia']);
     flash('Você se desconectou', 'success');
     header('location: /barbearia/cliente/auth/login');
+    die();
+}
+
+function logout_barbearia() {
+    unset($_SESSION['id_barbearia']);
+    flash('Você se desconectou', 'success');
+    header('location: /barbearia/barbeiro/auth/login');
     die();
 }

@@ -91,7 +91,7 @@ foreach ($data_3['tipos_servicos'] as $tipos_servicos) : ?>
             <div class="servico_prestado_detalhe col-sm-8 col-6 text-right">
                 <span class="inf_servico_prestado"><?php echo date('i', strtotime($servicos_barbearia['tempo'])) . 'm';?></span>
                 <span class="inf_servico_prestado"><?php echo 'R$ ' . $servicos_barbearia['preco'];?></span>
-                <a href="/barbearia/cliente/agendar_pedido/<?php echo $_SESSION['id_cliente'];?>/<?php echo $servicos_barbearia['id_barbearia'];?>/<?php echo $servicos_barbearia['id_servico'];?>" class="btn_padrao">Reservar</a>
+                <a href="/barbearia/cliente/agendar_pedido/<?php echo $_SESSION['id_cliente'];?>/<?php echo $servicos_barbearia['id_barbearia'];?>/<?php echo $servicos_barbearia['id_servico'];?>/<?php echo date("Ymd");?>" class="btn_padrao">Reservar</a>
             </div>
         </div>
     </div>

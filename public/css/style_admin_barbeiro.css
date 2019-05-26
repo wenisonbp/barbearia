@@ -191,6 +191,12 @@ body,html{
 .btn_padrao:hover{
     background-color: #456281; color: rgb(255, 255, 255); border: none !important;
 }
+.btn_salvar{
+    background-color: #14971f; border: none; padding: 2px; padding-left: 5px; padding-right: 5px; font-size: 13px; color: white;
+}
+.btn_salvar:hover{
+    background-color: #056612; color: rgb(255, 255, 255); border: none !important;
+}
 .btn_padrao_remover{
     background-color: #cf1818; border: none; padding: 2px; padding-left: 5px; padding-right: 5px; font-size: 13px; color: white;
 }

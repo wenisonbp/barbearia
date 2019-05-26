@@ -1,4 +1,12 @@
-<h3 class="text-center mb-5">Veja abaixo a lista dos seus serviços</h3>
+<div class="p-3 text-center" style="background-color: #F6F6F6;">
+    <h4>Veja abaixo a lista dos seus serviços <i class="fas fa-server"></i></h4>
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col-12">
+        <a href="http://" class="btn_salvar mr-2 float-right">Novo Serviço</a>
+    </div>      
+</div>
 
 <div class="categoria_serviços">
     <h5 class="pl-5">Cabelo</h5>

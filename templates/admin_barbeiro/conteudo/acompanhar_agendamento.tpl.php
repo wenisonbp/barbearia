@@ -1,6 +1,8 @@
-<h3 class="text-center mb-5">Veja abaixo os agendamentos em andamento</h3>
+<div class="p-3 text-center" style="background-color: #F6F6F6;">
+    <h4>Veja abaixo os agendamentos em andamento <i class="fas fa-chalkboard-teacher"></i></h4>
+</div>
 
-<div class="table-responsive-sm">
+<div class="table-responsive-sm mt-3">
     <table class="table table-hover text-center">
     <thead>
         <tr>
@@ -18,8 +20,8 @@
             <td>Teste</td>
             <td>Teste</td>
             <td>
-                <button type="button" class="btn btn-danger btn-sm mr-3">Cancelar</button>
-                <button type="button" class="btn btn-success btn-sm">Encerrar</button>
+                <a href="#" class="btn_padrao mr-2">Encerrar</a>
+                <a href="#" class="btn_padrao_remover">Cancelar</a>
             </td>
         </tr>
         <tr>
@@ -28,8 +30,8 @@
             <td>Teste</td>
             <td>Teste</td>
             <td>
-                <button type="button" class="btn btn-danger btn-sm mr-3">Cancelar</button>
-                <button type="button" class="btn btn-success btn-sm">Encerrar</button>
+                <a href="#" class="btn_padrao mr-2">Encerrar</a>
+                <a href="#" class="btn_padrao_remover">Cancelar</a>
             </td>
         </tr>
         <tr>
@@ -38,8 +40,8 @@
             <td>Teste</td>
             <td>Teste</td>
             <td>
-                <button type="button" class="btn btn-danger btn-sm mr-3">Cancelar</button>
-                <button type="button" class="btn btn-success btn-sm">Encerrar</button>
+                <a href="#" class="btn_padrao mr-2">Encerrar</a>
+                <a href="#" class="btn_padrao_remover">Cancelar</a>
             </td>
         </tr>
     </tbody>

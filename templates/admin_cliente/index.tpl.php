@@ -85,8 +85,29 @@
             $('#main').toggleClass('main_left');
             
         });
-        </script>    
-        <script>
+    </script>
+    <script>
+
+        function mostrar_horario(horario, data)
+        { 
+            $('.confirmacao_agendamento').css('display','block');
+            $('#horario_agendado').val(horario);
+            $('#horario_agendado_text').html(horario);
+            $('#data_agendada_text').html(data);
+            
+        }
+
+        function mostrar_data(data)
+        { 
+            $('#data_agendada_text').html(data);
+        }
+
+        function ocultar_confirmacao()
+        { 
+            $('.confirmacao_agendamento').css('display','none');
+        }
+
+    </script>
 
 </body>
 </html>

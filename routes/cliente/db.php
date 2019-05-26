@@ -61,12 +61,29 @@ $meus_agendamentos = function ($id_cliente) use ($conn) {
 
 // Captura os horários agendados da Barbearia escolhida
 
-$horarios_reservados = function ($id_barbearia) use ($conn) {
+$horarios_reservados = function ($data, $id_barbearia) use ($conn) {
 
-    $sql = "SELECT * FROM fila WHERE id_barbearia = ? AND status <> 'Encerrado' AND data = '2019-02-15'";
+    $sql = "SELECT * FROM fila WHERE id_barbearia = ? AND status <> 'Encerrado' AND data = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param('s', $id_barbearia);
+    $stmt->bind_param('ss', $id_barbearia, $data);
     $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+
+$agendar_horario = function ($id_cliente, $id_barbearia, $id_servico, $data) use ($conn) {
+
+    $horario_inicio = filter_input(INPUT_POST, 'horario_agendado');
+    $tempo = filter_input(INPUT_POST, 'tempo');
+    $intervalo = date("i", $minutos, strtotime($tempo));
+
+    $horario_fim = date('H:i:s', strtotime('+'.$intervalo.' minutes', strtotime($horario_inicio)));
+
+    $sql = "INSERT INTO fila (id_usuario, id_barbearia, id_servico, data, horario_inicio, horario_fim, nome_barbearia, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('sssssssss', $id_cliente, $id_barbearia, $id_servico, $data, $horario_inicio, $horario_fim);
+    $stmt->execute();   
     $resultado = $stmt->get_result();
     return $resultado->fetch_all(MYSQLI_ASSOC);
 };
@@ -85,7 +102,7 @@ $informacoes_servicos = function ($id_servico) use ($conn) {
 
 $funcionamento_barbearia = function ($id_barbearia) use ($conn) {
 
-    $sql = 'SELECT inicio_funcionamento, fim_funcionamento FROM barbearia WHERE id_barbearia = ?';
+    $sql = 'SELECT nome_barbearia, inicio_funcionamento, fim_funcionamento FROM barbearia WHERE id_barbearia = ?';
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $id_barbearia);
     $stmt->execute();
@@ -120,8 +137,8 @@ $login = function () use ($conn) {
         $senha = $user['senha'];
 
         if (!empty($senha)) {
-            $_SESSION['auth'] = $user['login'];
-            $_SESSION['name'] = $user['nome'];
+            // $_SESSION['auth'] = $user['login'];
+            // $_SESSION['name'] = $user['nome'];
             $_SESSION['id_cliente'] = $user['id_usuario'];
             return true;
         }
@@ -129,3 +146,4 @@ $login = function () use ($conn) {
 
     return false;
 };
+

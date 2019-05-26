@@ -1,11 +1,18 @@
 <?php
 
-auth_protection();
+// auth_protection();
+auth_protection_login();
 
 include __DIR__ . '/db.php';
 
 if ($params = resolve('/barbeiro/inicio/([a-z0-9]{1,100})')) {
-    render('admin_barbeiro/conteudo/informacoes_cadastro', 'admin_barbeiro/index');
+    $informacoes_barbearia = $informacoes_barbearia($params[1]);
+    render('admin_barbeiro/conteudo/informacoes_cadastro', 'admin_barbeiro/index', ['informacoes_barbearia' => $informacoes_barbearia]);
+}
+
+elseif ($params = resolve('/barbeiro/inicio/([a-z0-9]{1,100})/editar_cadastro')) {
+    $informacoes_barbearia = $informacoes_barbearia($params[1]);
+    render('admin_barbeiro/conteudo/editar_cadastro', 'admin_barbeiro/index', ['informacoes_barbearia' => $informacoes_barbearia]);
 }
 
 elseif ($params = resolve('/barbeiro/meus_servicos/([a-z0-9]{1,100})')) {
@@ -39,8 +46,8 @@ elseif (resolve('/barbeiro/auth/login')) {
     render('admin_barbeiro/conteudo/login', 'site');
 } 
 
-elseif (resolve('/cliente/auth/logout')) {
-    logout();
+elseif (resolve('/barbeiro/auth/logout')) {
+    logout_barbearia();
 }
 
 else {

@@ -1,4 +1,5 @@
 
+<div class="p-2">
 <div class="favoritos_conteudo">
     <div class="p-3 text-center" style="background-color: #F6F6F6;">
         <h4>Aqui você ver as locais marcados como favoritos <i class="far fa-bookmark"></i></h4>
@@ -38,5 +39,6 @@
         </div>
     </div>
     <hr>
+</div>
 </div>
 

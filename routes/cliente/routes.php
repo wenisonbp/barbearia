@@ -1,6 +1,7 @@
 <?php
 
-auth_protection();
+// auth_protection();
+auth_protection_login();
 
 include __DIR__ . '/db.php';
 
@@ -21,10 +22,19 @@ elseif ($params = resolve('/cliente/meus_agendamentos/([a-z0-9]{1,100})')) {
     render('admin_cliente/conteudo/meus_agendamentos', 'admin_cliente/index', ['meus_agendamentos' => $meus_agendamentos]);
 }
 
-elseif ($params = resolve('/cliente/agendar_pedido/([a-z0-9]{1,100})/([a-z0-9]{1,100})/([a-z0-9]{1,100})')) {
-    $horarios_reservados = $horarios_reservados($params[2]);
+elseif ($params = resolve('/cliente/agendar_pedido/([a-z0-9]{1,100})/([a-z0-9]{1,100})/([a-z0-9]{1,100})/([0-9]{1,10})')) { 
+
+    $horarios_reservados = $horarios_reservados($params[4], $params[2]);
     $informacoes_servicos = $informacoes_servicos($params[3]);
     $funcionamento_barbearia = $funcionamento_barbearia($params[2]);
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($agendar_horario($params[1], $params[2], $params[3], $params[4])) {
+            flash('Agendamento realizado com sucesso', 'success');
+            return header('location: /barbearia/cliente/inicio/' . $_SESSION['id_cliente']);
+        }
+        flash('Erro ao agendar', 'error');
+    }
     render('admin_cliente/conteudo/agendar_pedido', 'admin_cliente/index', ['horarios_reservados' => $horarios_reservados], ['informacoes_servicos' => $informacoes_servicos], ['funcionamento_barbearia' => $funcionamento_barbearia]);
 }
 
@@ -48,7 +58,7 @@ elseif (resolve('/cliente/auth/login')) {
 } 
 
 elseif (resolve('/cliente/auth/logout')) {
-    logout();
+    logout_cliente();
 }
 
 else {

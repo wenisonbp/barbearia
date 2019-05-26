@@ -1,5 +1,7 @@
-    <h3 class="text-center mb-5">Veja abaixo o histórico de seus agendamentos</h3>
-
+    <div class="p-3 text-center" style="background-color: #F6F6F6;">
+        <h4>Veja abaixo o histórico de seus agendamentos <i class="far fa-calendar-alt"></i></h4>
+    </div>
+    <hr>
     <div class="table-responsive">
         <table class="table table-hover text-body">
         <thead>

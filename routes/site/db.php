@@ -6,13 +6,13 @@
 $cadastro_barbearia = function () use ($conn) {
 
     $dados_completos = false;
-    $email = filter_input(INPUT_POST, 'email');
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $nome_cliente = filter_input(INPUT_POST, 'nome_proprietario');
     $nome_barbearia = filter_input(INPUT_POST, 'nome_barbearia');
-    $cnpj = filter_input(INPUT_POST, 'cnpj');
+    $cnpj = filter_input(INPUT_POST, 'cnpj', FILTER_SANITIZE_NUMBER_INT);
     $senha = filter_input(INPUT_POST, 'senha');
-    $contato_1 = filter_input(INPUT_POST, 'contato_1');
-    $contato_2 = filter_input(INPUT_POST, 'contato_2');
+    $contato_1 = filter_input(INPUT_POST, 'contato_1', FILTER_SANITIZE_NUMBER_INT);
+    $contato_2 = filter_input(INPUT_POST, 'contato_2', FILTER_SANITIZE_NUMBER_INT);
 
     if(empty($cnpj) or empty($email) or empty($nome_barbearia) or empty($contato_1) or empty($contato_2) or empty($senha)){
         
