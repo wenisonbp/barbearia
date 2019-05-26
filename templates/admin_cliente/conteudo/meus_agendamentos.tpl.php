@@ -1,5 +1,3 @@
-    
-
     <h3 class="text-center mb-5">Veja abaixo o histórico de seus agendamentos</h3>
 
     <div class="table-responsive">

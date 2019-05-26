@@ -51,13 +51,13 @@
         </nav>  
     </div>
     <div id="main">
-        <div class="row">
+        <div class="row conteudo">
             <div class="sidebar pt-3">
                 <ul>
-                    <a href="/barbearia/cliente/inicio/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="fas fa-map-marker-alt"></i></li>Encontrar Barbearia</a>
-                    <a href="/barbearia/cliente/meus_agendamentos/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="far fa-calendar-alt"></i></li>Meus Agendamentos</a>
-                    <a href="/barbearia/cliente/meus_favoritos/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="far fa-bookmark"></i></li>Meus Favoritos</a>
-                    <!-- <a href="/barbearia/cliente/meus_favoritos/<?php echo $_SESSION['id_barbearia'];?>"><li><i class="fab fa-hubspot"></i></li>Como funciona</a> -->
+                    <a href="/barbearia/cliente/inicio/<?php echo $_SESSION['id_cliente'];?>"><li><i class="fas fa-map-marker-alt"></i></li>Encontrar Barbearia</a>
+                    <a href="/barbearia/cliente/meus_agendamentos/<?php echo $_SESSION['id_cliente'];?>"><li><i class="far fa-calendar-alt"></i></li>Meus Agendamentos</a>
+                    <a href="/barbearia/cliente/meus_favoritos/<?php echo $_SESSION['id_cliente'];?>"><li><i class="far fa-bookmark"></i></li>Meus Favoritos</a>
+                    <!-- <a href="/barbearia/cliente/meus_favoritos/<?php echo $_SESSION['id_cliente'];?>"><li><i class="fab fa-hubspot"></i></li>Como funciona</a> -->
                 </ul>
             </div>
 

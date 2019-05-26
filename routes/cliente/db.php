@@ -63,7 +63,7 @@ $meus_agendamentos = function ($id_cliente) use ($conn) {
 
 $horarios_reservados = function ($id_barbearia) use ($conn) {
 
-    $sql = 'SELECT * FROM fila WHERE id_barbearia = ? WHERE status <> "Encerrado" WHERE data = "2019-02-15"';
+    $sql = "SELECT * FROM fila WHERE id_barbearia = ? AND status <> 'Encerrado' AND data = '2019-02-15'";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $id_barbearia);
     $stmt->execute();
@@ -78,6 +78,16 @@ $informacoes_servicos = function ($id_servico) use ($conn) {
     $sql = 'SELECT * FROM servico WHERE id_servico = ?';
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $id_servico);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+$funcionamento_barbearia = function ($id_barbearia) use ($conn) {
+
+    $sql = 'SELECT inicio_funcionamento, fim_funcionamento FROM barbearia WHERE id_barbearia = ?';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $id_barbearia);
     $stmt->execute();
     $resultado = $stmt->get_result();
     return $resultado->fetch_all(MYSQLI_ASSOC);

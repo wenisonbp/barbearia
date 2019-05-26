@@ -24,7 +24,8 @@ elseif ($params = resolve('/cliente/meus_agendamentos/([a-z0-9]{1,100})')) {
 elseif ($params = resolve('/cliente/agendar_pedido/([a-z0-9]{1,100})/([a-z0-9]{1,100})/([a-z0-9]{1,100})')) {
     $horarios_reservados = $horarios_reservados($params[2]);
     $informacoes_servicos = $informacoes_servicos($params[3]);
-    render('admin_cliente/conteudo/agendar_pedido', 'admin_cliente/index', ['horarios_reservados' => $horarios_reservados], ['informacoes_servicos' => $informacoes_servicos]);
+    $funcionamento_barbearia = $funcionamento_barbearia($params[2]);
+    render('admin_cliente/conteudo/agendar_pedido', 'admin_cliente/index', ['horarios_reservados' => $horarios_reservados], ['informacoes_servicos' => $informacoes_servicos], ['funcionamento_barbearia' => $funcionamento_barbearia]);
 }
 
 elseif ($params = resolve('/cliente/andamento_pedido.*')) {

@@ -50,7 +50,7 @@
         </nav>  
     </div>
     <div id="main">
-        <div class="row">
+        <div class="row conteudo">
             <div class="sidebar pt-3">
                 <ul>
                     <?php $params = resolve('/barbeiro/inicio/([a-z0-9]{1,100})'); $id = $params[1]; ?>
