@@ -19,16 +19,16 @@
                     <?php echo $meus_agendamentos['nome_barbearia']; ?>
                 </td>
                 <td>
-                    <?php echo $meus_agendamentos['data'] . ' - ' . $meus_agendamentos['horario_inicio']; ?></a>
+                    <?php echo date('d.m.Y', strtotime($meus_agendamentos['data'])) . ' às ' . $meus_agendamentos['horario_inicio']; ?></a>
                 </td>
                 <td>
-                    <?php echo $meus_agendamentos['data'] . ' - ' . $meus_agendamentos['horario_fim']; ?></a>
+                    <?php echo date('d.m.Y', strtotime($meus_agendamentos['data'])) . ' às ' . $meus_agendamentos['horario_fim']; ?></a>
                 </td>
                 <td>
                     <?php echo $meus_agendamentos['status']; ?></a>
                 </td>
             </tr>
-            <?php endforeach; ?>
+            <?php endforeach; echo date('Ymd')?>
         </tbody>
         </table>
     </div>

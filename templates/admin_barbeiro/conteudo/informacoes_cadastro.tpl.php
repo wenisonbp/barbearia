@@ -1,4 +1,4 @@
-<div class="">
+<div class="p-1">
 
     <div class="p-3 mb-3 text-center" style="background-color: #F6F6F6;">
         <h4>Veja abaixo as informações da sua Barbearia <i class="fas fa-address-book"></i></i></h4>
@@ -9,14 +9,14 @@
         </div>      
     </div>
     <hr>
-    <div class="row col-md-12">
-        <div class="col-6">
+    <div class="row col-sm-12 col-md-12">
+        <div class="col-12">
             <label class="font-weight-bold" for="">Nome da Barbearia:</label>
             <div>
                 <?php if(!empty($data['informacoes_barbearia'][0]['nome_barbearia'])) {echo $data['informacoes_barbearia'][0]['nome_barbearia'];}?>
             </div>
         </div>
-        <div class="col-6">
+        <div class="mt-2 col-sm-12 col-md-12">
             <label class="font-weight-bold" for="">E-mail cadastrado:</label>
             <div>
                 <?php if(!empty($data['informacoes_barbearia'][0]['email'])) {echo $data['informacoes_barbearia'][0]['email'];}?>
@@ -75,19 +75,19 @@
     </div>
 
     <div class="row col-md-12">
-        <div class="col-4 col-md-4 mb-3">
+        <div class="col-sm-12 col-md-4 mb-3 mr-1">
             <label class="font-weight-bold" for="">Complemento 1:</label>
             <div>
                 <?php if(!empty($data['informacoes_barbearia'][0]['complemento1_endereco'])) {echo $data['informacoes_barbearia'][0]['complemento1_endereco'];}else{echo "Não informado";}?>
             </div>
         </div>
-        <div class="col-4 col-md-4 mb-3">
+        <div class="col-sm-12 col-md-4 mb-3 mr-1">
             <label class="font-weight-bold" for="">Complemento 2:</label>
             <div>
                 <?php if(!empty($data['informacoes_barbearia'][0]['complemento2_endereco'])) {echo $data['informacoes_barbearia'][0]['complemento2_endereco'];}else{echo "Não informado";}?>
             </div>
         </div>
-        <div class="col-4 col-md-4 mb-3">
+        <div class="col-sm-12 col-md-4 mb-3 mr-1">
             <label class="font-weight-bold" for="">Complemento 3:</label>
             <div>
                 <?php if(!empty($data['informacoes_barbearia'][0]['complemento3_endereco'])) {echo $data['informacoes_barbearia'][0]['complemento3_endereco'];}else{echo "Não informado";}?>

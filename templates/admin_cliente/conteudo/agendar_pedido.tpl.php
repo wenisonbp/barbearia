@@ -120,15 +120,18 @@
 
 <div class="confirmacao_agendamento" style="display:none;">
 
-    <form action="" method="post">
+    <form action="" method="post" name="teste">
         <div class="p-2 text-center font-weight-bold"> 
             Horário escolhido
         </div>
         <div class="font-weight-light text-center"> 
             Dia <span id="data_agendada_text"></span> as <span id="horario_agendado_text">15:00</span>hs
         </div>
-        <input id="horario_agendado" nome="horario_agendado" type="text" style="display:none">
-        <input id="tempo" nome="tempo" value="<?php echo $data_2['informacoes_servicos'][0]['tempo'] ?>" type="text" style="display:none">
+
+        <input id="nome_barbearia" name="nome_barbearia" type="hidden" value="<?php echo $data_3['funcionamento_barbearia'][0]['nome_barbearia']; ?>">
+        <input id="horario_agendado" name="horario_agendado" type="hidden">
+        <input id="tempo" name="tempo" type="hidden" value="<?php echo $data_2['informacoes_servicos'][0]['tempo'] ?>">
+     
 
         <div class="p-2 text-center">
             <label class="font-weight-bold text-center mr-2" for="">Deseja confirmar o horário escolhido?</label>

@@ -75,7 +75,7 @@ $cadastro_cliente = function () use ($conn) {
     }else{
         $_SESSION['auth'] = $email;
         $_SESSION['name'] = $nome_cliente;
-        $_SESSION['id_usario'] = $id_usario;
+        $_SESSION['id_cliente'] = $id_usario;
         return true;
     }
 

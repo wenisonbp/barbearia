@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-group">
                             <label for="name">Nome</label>
-                            <input type="email" class="form-control" name="nome_cliente" id="name" placeholder="Informe o seu nome">
+                            <input type="text" class="form-control" name="nome_cliente" id="name" placeholder="Informe o seu nome">
                         </div>
                         <div class="form-group">
                             <label for="fone">Número de celular</label>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="form-group">
                         <label for="fone">Senha</label>
-                        <input type="text" name="senha_cliente" id="senha_cliente" class="form-control" placeholder="Informe sua senha">
+                        <input type="password" name="senha_cliente" id="senha_cliente" class="form-control" placeholder="Informe sua senha">
                         </div>
                         <input type="submit" value="Enviar" class="btn btn-primary btn-sm">
                     </div>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="form-group">
                         <label for="fone">Senha</label>
-                        <input type="text" name="senha" id="senha" class="form-control" placeholder="Informe sua senha">
+                        <input type="password" name="senha" id="senha" class="form-control" placeholder="Informe sua senha">
                         </div>
                         <input type="submit" value="Enviar" class="btn btn-primary btn-sm">
                     </div>

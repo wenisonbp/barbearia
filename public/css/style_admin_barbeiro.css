@@ -171,6 +171,11 @@ body,html{
     /* transition: 0.6s all; */
 }
 
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 /* INFORMAÇÕES SOBRE A BARBEARIA */
 
 .categoria_serviços{

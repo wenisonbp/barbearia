@@ -74,18 +74,16 @@ $horarios_reservados = function ($data, $id_barbearia) use ($conn) {
 
 $agendar_horario = function ($id_cliente, $id_barbearia, $id_servico, $data) use ($conn) {
 
+    $nome_barbearia = filter_input(INPUT_POST, 'nome_barbearia');
     $horario_inicio = filter_input(INPUT_POST, 'horario_agendado');
     $tempo = filter_input(INPUT_POST, 'tempo');
-    $intervalo = date("i", $minutos, strtotime($tempo));
-
+    $intervalo = date("i", strtotime($tempo));
     $horario_fim = date('H:i:s', strtotime('+'.$intervalo.' minutes', strtotime($horario_inicio)));
 
-    $sql = "INSERT INTO fila (id_usuario, id_barbearia, id_servico, data, horario_inicio, horario_fim, nome_barbearia, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO fila (id_usuario, id_barbearia, id_servico, data, horario_inicio, horario_fim, nome_barbearia, status) VALUES (?, ?, ?, ?, ?, ?, ?, 'Pendente');";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param('sssssssss', $id_cliente, $id_barbearia, $id_servico, $data, $horario_inicio, $horario_fim);
-    $stmt->execute();   
-    $resultado = $stmt->get_result();
-    return $resultado->fetch_all(MYSQLI_ASSOC);
+    $stmt->bind_param('sssssss', $id_cliente, $id_barbearia, $id_servico, $data, $horario_inicio, $horario_fim, $nome_barbearia);
+    return $stmt->execute();  
 };
 
 // captura as informações do serviço escolhido
