@@ -11,7 +11,7 @@ CREATE TABLE barbearia (
   cnpj varchar(30) DEFAULT NULL,
   sobre text,
   email varchar(60) DEFAULT NULL,
-  inicio_funcionamento time DEFAULT NULL,
+  inicio_funcionamento time DEFAULT NULL, 
   fim_funcionamento time DEFAULT NULL,
   informacao_adicional text,
   logradouro_endereco varchar(80) DEFAULT NULL,
