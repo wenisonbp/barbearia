@@ -15,27 +15,28 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1°</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>Teste</td>
-        </tr>
-        <tr>
-            <td>2°</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>Teste</td>
-        </tr>
-        <tr>
-            <td>3°</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>Teste</td>
-        </tr>
+    <?php $i = 1; 
+            if(count($data['historico_agendamentos']) < 1){
+                echo '<div class="text-center mb-2 text-danger">Nenhum agendamento encontrado!</div>';
+            } else{           
+            
+            foreach ($data['historico_agendamentos'] as $agendamentos) : ?>
+              <tr>
+                  <td><?php echo $i . '°'; ?></td>
+                  <td>
+                      <?php echo $agendamentos['nome_cliente'] ?></a> <i class="fas fa-map-marked-alt"></i>
+                  </td>
+                  <td>
+                      <?php echo $agendamentos['data'] . ' - ' . $agendamentos['horario_inicio']; ?></a>
+                  </td>
+                  <td>
+                      <?php echo $agendamentos['data'] . ' - ' . $agendamentos['horario_fim']; ?></a>
+                  </td>
+                <td>
+                    <?php echo $agendamentos['data'] . ' - ' . $agendamentos['status']; ?></a>
+                </td>
+            </tr>
+            <?php $i++; endforeach;} ?>
     </tbody>
     </table>
 </div>

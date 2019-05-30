@@ -9,12 +9,13 @@
                 <!-- <div class="input-group-prepend" for="busca">
                     <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
                 </div> -->
+                <!-- Button janela Modal -->
                 <button type="button" class="mr-2 btn btn-primary ion-search" style="background-color: #2c3e50;border: none;" data-toggle="modal" data-target=".bd-example-modal-xl"><i class="fas fa-filter"></i></button>  
                 <input type="text" class="form-control" placeholder="Entre o melhor lugar...." aria-label="busca" id="busca" aria-describedby="basic-addon1" name="nome_barbearia">
             </div>
             <div class="col-auto my-1">
-                <!-- Button janela Modal -->
-                <button type="submit" class="btn btn-primary ion-search" style="background-color: #2c3e50;border: none;" data-toggle="modal" data-target=".bd-example-modal-xl"><i class="fas fa-search"></i></button>                              
+                
+                <button type="submit" class="btn btn-primary ion-search" style="background-color: #2c3e50;border: none;"><i class="fas fa-search"></i></button>                              
             </div>
         </div>
     </form>
@@ -30,16 +31,14 @@
         </thead>
         <tbody>
             <?php
-            var_dump($data['lista_barbearias']);
-            var_dump($data['lista_barbearias']);
             foreach ($data['lista_barbearias'] as $lista_barbearias) : ?>
               <tr onclick="location.href = '/barbearia/cliente/solicitacao/<?php echo $_SESSION['id_cliente'];?>/<?php echo $lista_barbearias['id_barbearia']; ?>'" style="cursor: pointer;">
                   <td><?php echo $lista_barbearias['nome_barbearia']; ?></td>
                   <td>
-                      <?php echo 'teste' ?></a> <i class="fas fa-map-marked-alt"></i>
+                      <?php echo $lista_barbearias['distancia'] . ' km' ?></a> <i class="fas fa-map-marked-alt"></i>
                   </td>
                   <td>
-                      <?php echo 'teste'; ?></a> <i class="fas fa-star"></i>
+                      <?php echo $lista_barbearias['avaliacao']; ?></a> <i class="fas fa-star" style="color: #FFC107;"></i>
                   </td>
               </tr>
             <?php endforeach; ?>
@@ -70,10 +69,6 @@
                     <input class="form-check-input" type="radio" name="avaliacao" id="inlineRadio2" value="avaliacao">
                     <label class="form-check-label" for="inlineRadio2">Melhor Avaliação</label>
                 </div>
-                <!-- <div class="form-check">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                    <label class="form-check-label" for="inlineRadio3">Menor Média de Preço</label>
-                </div> -->
             </div>
             <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->

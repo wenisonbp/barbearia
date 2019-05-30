@@ -28,7 +28,7 @@
                     <?php echo $meus_agendamentos['status']; ?></a>
                 </td>
             </tr>
-            <?php endforeach; echo date('Ymd')?>
+            <?php endforeach;?>
         </tbody>
         </table>
     </div>

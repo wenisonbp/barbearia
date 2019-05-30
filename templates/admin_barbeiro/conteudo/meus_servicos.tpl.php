@@ -4,7 +4,7 @@
 
 <div class="row mt-3 mb-3">
     <div class="col-12">
-        <a href="http://" class="btn_salvar mr-2 float-right">Novo Serviço</a>
+        <a href="/barbearia/barbeiro/cadastrar_servico/<?php echo $_SESSION['id_barbearia'];?>" class="btn_salvar mr-2 float-right">Novo Serviço</a>
     </div>      
 </div>
 

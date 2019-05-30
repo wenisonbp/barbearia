@@ -15,35 +15,30 @@
     </thead>
     <tbody>
         <tr>
-            <td>1°</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>
-                <a href="#" class="btn_padrao mr-2">Encerrar</a>
-                <a href="#" class="btn_padrao_remover">Cancelar</a>
-            </td>
-        </tr>
-        <tr>
-            <td>2°</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>
-                <a href="#" class="btn_padrao mr-2">Encerrar</a>
-                <a href="#" class="btn_padrao_remover">Cancelar</a>
-            </td>
-        </tr>
-        <tr>
-            <td>3°</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>Teste</td>
-            <td>
-                <a href="#" class="btn_padrao mr-2">Encerrar</a>
-                <a href="#" class="btn_padrao_remover">Cancelar</a>
-            </td>
-        </tr>
+
+            <?php $i = 1; 
+            if(count($data['acompanhar_agendamentos']) < 1){
+                echo '<div class="text-center mb-2 text-danger">Nenhum agendamento pendente!</div>';
+            } else{           
+            
+            foreach ($data['acompanhar_agendamentos'] as $agendamentos) : ?>
+              <tr>
+                  <td><?php echo $i . '°'; ?></td>
+                  <td>
+                      <?php echo 'teste' ?></a> <i class="fas fa-map-marked-alt"></i>
+                  </td>
+                  <td>
+                      <?php echo $agendamentos['data'] . ' - ' . $agendamentos['horario_inicio']; ?></a>
+                  </td>
+                  <td>
+                      <?php echo $agendamentos['data'] . ' - ' . $agendamentos['horario_fim']; ?></a>
+                  </td>
+                <td>
+                    <a href="#" class="btn_padrao mr-2">Encerrar</a>
+                    <a href="#" class="btn_padrao_remover">Cancelar</a>
+                </td>
+            </tr>
+            <?php $i++; endforeach;} ?>
     </tbody>
     </table>
 </div>
