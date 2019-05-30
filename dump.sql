@@ -77,13 +77,17 @@ CREATE TABLE `usuario` (
   UNIQUE KEY `token_UNIQUE` (`token`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
-(`id_barbearia`, `nome_barbearia`, `num_endereco`, `bairro_endereco`, `cidade_endereco`, `estado_endereco`, `cnpj`, `sobre`, `email`, `inicio_funcionamento`, `fim_funcionamento`, `informacao_adicional`, `logradouro_endereco`, `contato_1`, `contato_2`, `id_dono`, `cep`, `distancia`, `avaliacao`) 
+--- BARBEARIAS ---
+
+INSERT INTO `qbarber`.`barbearia` (`id_barbearia`, `nome_barbearia`, `num_endereco`, `bairro_endereco`, `cidade_endereco`, `estado_endereco`, `cnpj`, `sobre`, `email`, `inicio_funcionamento`, `fim_funcionamento`, `informacao_adicional`, `logradouro_endereco`, `contato_1`, `contato_2`, `id_dono`, `cep`, `distancia`, `avaliacao`) 
 VALUES 
-('asd1asd3154', 'Barbearia Italiana', '150', 'Aldeota', 'Fortaleza', 'CE', '5420056354569', 'Barbearia do clássico ao moderno. Agende seu horário e venha se surpreender.', 'teste1@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545123', '60543-00', '5', '5'),
-('asd1asd3155', 'Os Marujos Barbearia', '150', 'Aldeota', 'Fortaleza', 'CE', '5520056550569', 'Profissionais preparados para atender à sua expectativa. Agende seu horário e venha se surpreender com a qualidade dos nosso atendimento.', 'teste2@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545124', '60543-00', '5', '3'),
-('asd1asd3156', 'Barbearia João Meleiro', '150', 'Aldeota', 'Fortaleza', 'CE', '5820052455569', 'Barbearia voltada para o público masculino, ambiente retrô, conforto e serviço de qualidade...', 'teste3@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545125', '60543-00', '5', '4'),
-('asd1asd3157', 'Barbearia Caravela', '150', 'Aldeota', 'Fortaleza', 'CE', '5920057458569', 'Local Recomendado Para O Público Masculino. Profissionais Extremamente Capacitados Para Atender Os Clientes Com Excelencia.', 'teste4@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545126', '60543-00', '5', '4'),
-('asd1asd3158', 'Barbearia do Beto', '150', 'Aldeota', 'Fortaleza', 'CE', '5220056456569', 'Além de serviços de barbearia, contamos com tatuadores experientes e uma variada carta de cervejas especiais.', 'teste5@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545127', '60543-00', '5', '5');
+('asd1asd3154', 'Barbearia Italiana', '150', 'Aldeota', 'Fortaleza', 'CE', '5420056354569', 'Barbearia do clássico ao moderno. Agende seu horário e venha se surpreender.', 'barbearia_italiana@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545123', '60543-00', '5', '5'),
+('asd1asd3155', 'Os Marujos Barbearia', '150', 'Aldeota', 'Fortaleza', 'CE', '5520056550569', 'Profissionais preparados para atender à sua expectativa. Agende seu horário e venha se surpreender com a qualidade dos nosso atendimento.', 'osmarujos@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545124', '60543-00', '5', '3'),
+('asd1asd3156', 'Barbearia João Meleiro', '150', 'Aldeota', 'Fortaleza', 'CE', '5820052455569', 'Barbearia voltada para o público masculino, ambiente retrô, conforto e serviço de qualidade...', 'barbearia_joao@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545125', '60543-00', '5', '4'),
+('asd1asd3157', 'Barbearia Caravela', '150', 'Aldeota', 'Fortaleza', 'CE', '5920057458569', 'Local Recomendado Para O Público Masculino. Profissionais Extremamente Capacitados Para Atender Os Clientes Com Excelencia.', 'caravela@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545126', '60543-00', '5', '4'),
+('asd1asd3158', 'Barbearia do Beto', '150', 'Aldeota', 'Fortaleza', 'CE', '5220056456569', 'Além de serviços de barbearia, contamos com tatuadores experientes e uma variada carta de cervejas especiais.', 'barbearia_beto@teste.com', '08:00', '18:00', 'Sem informações.', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545127', '60543-00', '5', '5');
+
+--- SERVIÇOS ---
 
 INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`, `tempo`, `preco`) VALUES ('1', 'asd1asd3154', 'Combo', 'Corte + Barba', '00:40:00', '25');
 INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`, `tempo`, `preco`) VALUES ('2', 'asd1asd3154', 'Combo', 'Corte + Progressiva', '00:50:00', '50');
@@ -91,12 +95,15 @@ INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`
 INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`, `tempo`, `preco`) VALUES ('4', 'asd1asd3154', 'Cabelo', 'Pezinho', '00:20:00', '20');
 INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`, `tempo`, `preco`) VALUES ('5', 'asd1asd3154', 'Barba', 'Barboterapia', '00:40:00', '30');
 
+--- IMAGEM DA LOGO ---
+
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('1', '/barbearia/public/logo_barbearia/Logo1.png', 'asd1asd3154', 'logo');
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('2', '/barbearia/public/logo_barbearia/Logo2.jfif', 'asd1asd3155', 'logo');
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('3', '/barbearia/public/logo_barbearia/Logo3.jfif', 'asd1asd3156', 'logo');
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('4', '/barbearia/public/logo_barbearia/Logo4.jfif', 'asd1asd3157', 'logo');
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('5', '/barbearia/public/logo_barbearia/Logo5.jpg', 'asd1asd3158', 'logo');
 
+--- IMAGENS DO SLIDE ---
 
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('6', '/barbearia/public/slide_barbearia/a1.jpg', 'asd1asd3154', 'slide');
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('7', '/barbearia/public/slide_barbearia/a2.jpg', 'asd1asd3154', 'slide');
@@ -113,3 +120,11 @@ INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('18', '/barbearia/public/slide_barbearia/e1.jpg', 'asd1asd3158', 'slide');
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('19', '/barbearia/public/slide_barbearia/e2.jpg', 'asd1asd3158', 'slide');
 INSERT INTO `qbarber`.`imagem` (`id_imagem`, `caminho`, `id_barbearia`, `posicao`) VALUES ('20', '/barbearia/public/slide_barbearia/e3.jpg', 'asd1asd3158', 'slide');
+
+--- USUÁRIOS ---
+
+INSERT INTO `qbarber`.`usuario` (`id_usuario`, `login`, `senha`, `permissao`, `nome`, `token`) VALUES ('jkasdhhjsd545123', 'barbearia_italiana@teste.com', '12345', '1', 'Teste', '1');
+INSERT INTO `qbarber`.`usuario` (`id_usuario`, `login`, `senha`, `permissao`, `nome`, `token`) VALUES ('jkasdhhjsd545124', 'osmarujos@teste.com', '12345', '1', 'Teste', '2');
+INSERT INTO `qbarber`.`usuario` (`id_usuario`, `login`, `senha`, `permissao`, `nome`, `token`) VALUES ('jkasdhhjsd545125', 'barbearia_joao@teste.com', '12345', '1', 'Teste', '3');
+INSERT INTO `qbarber`.`usuario` (`id_usuario`, `login`, `senha`, `permissao`, `nome`, `token`) VALUES ('jkasdhhjsd545126', 'caravela@teste.com', '12345', '1', 'Teste', '4');
+INSERT INTO `qbarber`.`usuario` (`id_usuario`, `login`, `senha`, `permissao`, `nome`, `token`) VALUES ('jkasdhhjsd545127', 'barbearia_beto@teste.com', '12345', '1', 'Teste', '5');

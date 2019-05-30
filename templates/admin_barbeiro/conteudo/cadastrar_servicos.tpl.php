@@ -14,7 +14,7 @@
                 <label class="font-weight-bold" for="">Tipo de serviço:</label>
                 <div class="form-group">
                     <label for="tipo_servico">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="tipo_servico">
+                    <select class="form-control" id="exampleFormControlSelect1" name="tipo">
                     <option>Combo</option>
                     <option>Cabelo</option>
                     <option>Barba</option>
@@ -28,18 +28,18 @@
                 </div>
             </div>
             <div class="col-6">
-                <label class="font-weight-bold" for="">E-mail cadastrado:</label>
+                <label class="font-weight-bold" for="">Serviço:</label>
                 <div>
-                    <input type="email" class="form-control" name="email" value="">
+                    <input type="email" class="form-control" name="servico" value="">
                 </div>
             </div>
         </div>
         <hr>
         <div class="row col-md-12">
             <div class="col-10 col-md-6 mb-3">
-                <label class="font-weight-bold" for="">Endereço:</label>
+                <label class="font-weight-bold" for="">Tempo:</label>
                 <div>
-                    <input type="text" class="form-control" name="logradouro_endereco" value="">
+                    <input type="time" class="form-control" name="time" value="">
                 </div>
             </div>
             <div class="col-2 col-md-2 mb-3">
@@ -52,21 +52,9 @@
 
         <div class="row col-md-12">
             <div class="col-4 col-md-4 mb-3">
-                <label class="font-weight-bold" for="">CEP:</label>
+                <label class="font-weight-bold" for="">Preço:</label>
                 <div>
                     <input type="text" class="form-control" name="cep" value="">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 mb-3">
-                <label class="font-weight-bold" for="">Cidade:</label>
-                <div>
-                    <input type="text" class="form-control" name="cidade_endereco" value="">
-                </div>
-            </div>
-            <div class="col-2 col-md-4 mb-3">
-                <label class="font-weight-bold" for="">UF:</label>
-                <div>
-                    <input type="text" class="form-control" name="estado_endereco" value="">
                 </div>
             </div>
         </div>
