@@ -66,6 +66,8 @@ $unica_barbearia = function ($id_barbearia) use ($conn) {
 
 $carregar_slides = function ($id_barbearia) use ($conn) {
 
+
+    
     $sql = 'SELECT * FROM imagem WHERE id_barbearia = ? AND posicao = "slide"';
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $id_barbearia);

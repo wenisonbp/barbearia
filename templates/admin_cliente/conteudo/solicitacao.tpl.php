@@ -10,7 +10,7 @@
 <hr>
 <div class="row h-auto">
 
-
+    <!-- Carregar Slide -->
     <div class="col-md-6">
         <div id="carouselExampleInterval" class="p-2 carousel slide w-100" data-ride="carousel">
         <div class="carousel-inner">
