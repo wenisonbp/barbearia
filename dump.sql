@@ -20,6 +20,9 @@ CREATE TABLE `barbearia` (
   `contato_1` varchar(15) DEFAULT NULL,
   `contato_2` varchar(15) DEFAULT NULL,
   `id_dono` varchar(50) DEFAULT NULL,
+  `cep` varchar(25) DEFAULT NULL,
+  `distancia` decimal(3,1) DEFAULT NULL,
+  `avaliacao` decimal(3,1) DEFAULT NULL,
   PRIMARY KEY (`id_barbearia`),
   UNIQUE KEY `cnpj_UNIQUE` (`cnpj`),
   UNIQUE KEY `email_UNIQUE` (`email`),
@@ -39,8 +42,9 @@ CREATE TABLE `fila` (
   `data` date DEFAULT NULL,
   `nome_barbearia` varchar(80) DEFAULT NULL,
   `status` varchar(45) DEFAULT NULL,
+  `nome_cliente` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_fila`)
-) ENGINE=MyISAM AUTO_INCREMENT=132565 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=132571 DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE `imagem` (

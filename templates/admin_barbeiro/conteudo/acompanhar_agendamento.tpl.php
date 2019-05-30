@@ -25,7 +25,7 @@
               <tr>
                   <td><?php echo $i . '°'; ?></td>
                   <td>
-                      <?php echo 'teste' ?></a> <i class="fas fa-map-marked-alt"></i>
+                      <?php echo $agendamentos['nome_cliente']; ?></a> <i class="fas fa-map-marked-alt"></i>
                   </td>
                   <td>
                       <?php echo $agendamentos['data'] . ' - ' . $agendamentos['horario_inicio']; ?></a>
