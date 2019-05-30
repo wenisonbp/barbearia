@@ -76,3 +76,17 @@ CREATE TABLE `usuario` (
   UNIQUE KEY `login_UNIQUE` (`login`),
   UNIQUE KEY `token_UNIQUE` (`token`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+(`id_barbearia`, `nome_barbearia`, `num_endereco`, `bairro_endereco`, `cidade_endereco`, `estado_endereco`, `cnpj`, `sobre`, `email`, `inicio_funcionamento`, `fim_funcionamento`, `informacao_adicional`, `logradouro_endereco`, `contato_1`, `contato_2`, `id_dono`, `cep`, `distancia`, `avaliacao`) 
+VALUES 
+('asd1asd3154', 'Teste 1', '150', 'Aldeota', 'Fortaleza', 'CE', '5420056354569', 'Teste', 'teste1@teste.com', '08:00', '18:00', 'Teste', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545123', '60543-00', '5', '5'),
+('asd1asd3155', 'Teste 2', '150', 'Aldeota', 'Fortaleza', 'CE', '5520056550569', 'Teste', 'teste2@teste.com', '08:00', '18:00', 'Teste', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545124', '60543-00', '5', '3'),
+('asd1asd3156', 'Teste 3', '150', 'Aldeota', 'Fortaleza', 'CE', '5820052455569', 'Teste', 'teste3@teste.com', '08:00', '18:00', 'Teste', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545125', '60543-00', '5', '4'),
+('asd1asd3157', 'Teste 4', '150', 'Aldeota', 'Fortaleza', 'CE', '5920057458569', 'Teste', 'teste4@teste.com', '08:00', '18:00', 'Teste', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545126', '60543-00', '5', '4'),
+('asd1asd3158', 'Teste 5', '150', 'Aldeota', 'Fortaleza', 'CE', '5220056456569', 'Teste', 'teste5@teste.com', '08:00', '18:00', 'Teste', 'Av. C', '(85) 98000-5556', '(85) 99000-5555', 'jkasdhhjsd545127', '60543-00', '5', '5');
+
+INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`, `tempo`, `preco`) VALUES ('1', 'asd1asd3154', 'Combo', 'Corte + Barba', '00:40:00', '25');
+INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`, `tempo`, `preco`) VALUES ('2', 'asd1asd3154', 'Combo', 'Corte + Progressiva', '00:50:00', '50');
+INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`, `tempo`, `preco`) VALUES ('3', 'asd1asd3154', 'Cabelo', 'Corte', '00:30:00', '30');
+INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`, `tempo`, `preco`) VALUES ('4', 'asd1asd3154', 'Cabelo', 'Pezinho', '00:20:00', '20');
+INSERT INTO `qbarber`.`servico` (`id_servico`, `id_barbearia`, `tipo`, `servico`, `tempo`, `preco`) VALUES ('5', 'asd1asd3154', 'Barba', 'Barboterapia', '00:40:00', '30');
