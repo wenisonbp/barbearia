@@ -35,6 +35,26 @@ $historico_agendamentos = function ($id_barbearia) use ($conn) {
     return $resultado->fetch_all(MYSQLI_ASSOC);
 };
 
+$tipos_servicos = function ($id_barbearia) use ($conn) {
+
+    $sql = 'SELECT DISTINCT tipo FROM servico WHERE id_barbearia = ?';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $id_barbearia);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+$meus_servicos = function ($id_barbearia) use ($conn) {
+
+    $sql = 'SELECT * FROM servico WHERE id_barbearia = ?';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $id_barbearia);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
 
 $carregar_slides = function ($id_barbearia) use ($conn) {
 
@@ -45,6 +65,22 @@ $carregar_slides = function ($id_barbearia) use ($conn) {
     $stmt->execute();
     $resultado = $stmt->get_result();
     return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+
+$cadastrar_servico = function ($id_barbearia) use ($conn) {
+
+    $id_servico = md5(date("Y-m-d H:i:s").rand(0, 1000));
+    $tipo = filter_input(INPUT_POST, 'tipo');
+    $email = filter_input(INPUT_POST, 'servico');
+    $tempo = filter_input(INPUT_POST, 'tempo');
+    $preco = filter_input(INPUT_POST, 'preco');
+
+    $sql = "INSERT INTO servico (id_servico, id_barbearia, tipo, servico, tempo, preco) VALUES (?, ?, ?, ?, ?, ?);";  
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('ssssss', $id_servico, $id_barbearia, $tipo, $email, $tempo, $preco);
+    flash('Registro criado com sucesso!', 'success');
+    return $stmt->execute();
 };
 
 
