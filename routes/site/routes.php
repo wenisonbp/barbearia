@@ -32,7 +32,7 @@ elseif ($params = resolve('/realizar_cadastro')){
         }
         flash('Favor verificar os dados preenchidos', 'error');
     }
-    render('site/cadastro', 'site3');
+    render('site/cadastro', 'site2');
 }
 
 else {

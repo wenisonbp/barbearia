@@ -54,7 +54,7 @@ elseif (resolve('/cliente/auth/login')) {
         }
         flash('Dados inválidos', 'error');
     }
-    render('admin_cliente/conteudo/login', 'site');
+    render('admin_cliente/conteudo/login', 'site2');
 } 
 
 elseif (resolve('/cliente/auth/logout')) {

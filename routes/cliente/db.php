@@ -4,6 +4,45 @@
 
 $lista_barbearias = function () use ($conn) {
 
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        $distancia = filter_input(INPUT_POST, 'distancia', FILTER_SANITIZE_STRING);
+        $avaliacao = filter_input(INPUT_POST, 'avaliacao', FILTER_SANITIZE_STRING);
+        $nome_barbearia = filter_input(INPUT_POST, 'nome_barbearia');
+
+        // var_dump($_POST);
+        if (!empty($nome_barbearia)) {
+            
+            $sql = "SELECT * FROM barbearia WHERE nome_barbearia LIKE '%".$nome_barbearia."%'";
+            $stmt = $conn->prepare($sql);
+            // $stmt->bind_param('s', $nome_barbearia);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            return $resultado->fetch_all(MYSQLI_ASSOC);
+        }
+
+        if (!empty($distancia)) {
+            
+            $sql = "SELECT * FROM qbarber.barbearia ORDER BY distancia ASC";
+            $stmt = $conn->prepare($sql);
+            // $stmt->bind_param('s', $nome_barbearia);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            return $resultado->fetch_all(MYSQLI_ASSOC);
+        }
+
+        if (!empty($avaliacao)) {
+            
+            $sql = "SELECT * FROM qbarber.barbearia ORDER BY avaliacao DESC";
+            $stmt = $conn->prepare($sql);
+            // $stmt->bind_param('s', $nome_barbearia);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            return $resultado->fetch_all(MYSQLI_ASSOC);
+        }
+
+    }
+
     $sql = 'SELECT * FROM barbearia';
     $stmt = $conn->prepare($sql);
     //$stmt->bind_param('ss', $grupo, $indicador);

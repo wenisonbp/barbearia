@@ -43,7 +43,7 @@ elseif (resolve('/barbeiro/auth/login')) {
         }
         flash('Dados inválidos', 'error');
     }
-    render('admin_barbeiro/conteudo/login', 'site');
+    render('admin_barbeiro/conteudo/login', 'site2');
 } 
 
 elseif (resolve('/barbeiro/auth/logout')) {

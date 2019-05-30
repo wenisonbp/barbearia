@@ -44,14 +44,17 @@ $(document).ready(function(){
         if(tipo_cadastro == 'barbeiro'){
             $(".cadastro_cliente").hide();
             $(".cadastro_empresa").show();
+            $("#content").css('height', 'auto');
         }
         if(tipo_cadastro == 'cliente'){
             $(".cadastro_empresa").hide();
             $(".cadastro_cliente").show();
+            $("#content").css('height', '100%');
         }
         if(tipo_cadastro == ''){
             $(".cadastro_empresa").hide();
             $(".cadastro_cliente").hide();
+            $("#content").css('height', '100%');
         }
     });
 

@@ -353,9 +353,10 @@ a.navbar-brand.js-scroll-trigger.img-logo{
 #mainNav.navbar-shrink{
     background-color:#424242 !important;
 }
+  }
 
 @media (min-width: 992px){
 #mainNav.navbar-shrink .nav-link:hover {
     color: #64a19d !important;
 }
-
+}

@@ -1,143 +1,81 @@
 <!DOCTYPE html>
-<html lang="br">
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/barbearia/public/pnotify/pnotify.custom.min.css">
+    <link rel="stylesheet" href="/barbearia/public/css/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/barbearia/public/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/barbearia/public/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/barbearia/public/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/barbearia/public/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/barbearia/public/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/barbearia/public/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/barbearia/public/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/barbearia/public/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/barbearia/public/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/barbearia/public/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/barbearia/public/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/barbearia/public/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/barbearia/public/icon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/barbearia/public/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Qbarber - barbearia do futuro</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="/barbearia/public/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="/barbearia/public/fontawesome/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <!-- <link href="css/grayscale.min.css" rel="stylesheet"> -->
-  <link href="/barbearia/public/css/estilo.css" rel="stylesheet">
-
+    <title>QBarber</title>
 </head>
-
-<body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger img-logo" href="index.php">Logotipo</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-
-        <ul class="navbar-nav ml-auto">
-
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="">Entrar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">junte-se a nós</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#signup">Contatos</a>
-          </li>
-        </ul>
-      </div>
+<body>
+    <div id="main">
+        <nav id="nav_primary" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand js-scroll-trigger img-logo" href="/barbearia"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="/barbearia">Home</a>
+                </li> -->
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/barbearia/junte_se_a_nos">Junte-se a nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/barbearia/contatos">Contatos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/barbearia/quem_somos">Quem somos</a>
+                </li> -->
+                </ul>
+                <!-- <a href="/barbearia/realizar_cadastro" style="text-decoration: none; color: white;" class="mr-3">Cadastrar-se</a> -->
+                <a href="/barbearia/cliente/auth/login" class="btn btn-success btn-sm mr-3">Login Cliente</a>
+                <a href="/barbearia/barbeiro/auth/login" class="btn btn-warning btn-sm">Login Barbeiro</a>
+            </div>
+        </nav>      
     </div>
-  </nav>
 
-  <!-- Header -->
-
-  <div id="content">
+    <div id="content">
         <?php include $content ?>
-  </div>      
+    </div>         
+
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <a class="navbar-brand" href="#">Barbearia Black Hair - 2019</a>
+    </nav>
 
 
-  <!-- Contact Section -->
-  <section class="contact-section bg-black">
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
-            <div class="card-body text-center">
-              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Nosso endereço</h4>
-              <hr class="my-4">
-              <div class="small text-black-50">4923 Aldeota, Fortaleza br</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
-            <div class="card-body text-center">
-              <i class="fas fa-envelope text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Email</h4>
-              <hr class="my-4">
-              <div class="small text-black-50">
-                <a href="#">Qbarber@gmail.com</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
-            <div class="card-body text-center">
-              <i class="fas fa-mobile-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Telefone</h4>
-              <hr class="my-4">
-              <div class="small text-black-50">+55 (085) 99999-0000</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="social d-flex justify-content-center">
-        <a href="#" class="mx-2">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="mx-2">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="mx-2">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-
-    </div>
-  </section>
- 
-  <!-- Footer -->
-  <footer class="bg-black small text-center text-white-50">
-    <div class="container">
-      Copyright &copy; todos os direitos reservados 2019
-    </div>
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="/barbearia/public/js/jquery.min.js"></script>
-  <script src="/barbearia/public/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
-
-  <!-- Custom scripts for this template -->
-  <!-- <script src="js/grayscale.min.js"></script> -->
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/barbearia/public/js/jquery.mask.min.js"></script>
+    <script src="/barbearia/public/pnotify/pnotify.custom.min.js"></script>
+    <script type="text/javascript" src="/barbearia/public/js/templates_site.js"></script>
+    <script>
+        <?php flash(); ?>
+    </script>
+    
 </body>
-
 </html>

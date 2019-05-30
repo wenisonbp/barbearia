@@ -1,6 +1,6 @@
 
 <div id="contato_usuario" class="row justify-content-center pt-5">
-    <div class="p-2 pt-5 col-sm-9 col-md-6">
+    <div class="p-2 pt-1 mb-5 col-sm-9 col-md-6">
         <div class="card">
             <div class="card-body">
                 <div class="form-group">

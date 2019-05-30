@@ -44,7 +44,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger img-logo" href="index.php">Logotipo</a>
+      <a class="navbar-brand js-scroll-trigger img-logo" href="/barbearia">Logotipo</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -54,7 +54,7 @@
         <ul class="navbar-nav ml-auto">
 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="">Entrar</a>
+            <a class="nav-link js-scroll-trigger" href="/barbearia/cliente/auth/login">Entrar</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#projects">junte-se a nós</a>
@@ -107,7 +107,7 @@
       <!-- Featured Project Row -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0" src="/barbearia/public/img/img3.jpg" alt="">
+          <img class="img-fluid mb-3 mb-lg-0" src="/barbearia/public/img/js.png" alt="">
         </div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
