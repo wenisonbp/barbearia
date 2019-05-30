@@ -1,12 +1,14 @@
 <?php
 
 function get_user_cliente() {
-    return $_SESSION['id_cliente'] ?? null;
+    //return $_SESSION['id_cliente'] ?? null;
+    return !empty($_SESSION['id_cliente']) ? $_SESSION['id_cliente'] : null;
 }
 
 
 function get_user_barbeiro() {
-    return $_SESSION['id_barbearia'] ?? null;
+    //return $_SESSION['id_barbearia'] ?? null;
+    return !empty($_SESSION['id_barbearia']) ? $_SESSION['id_barbearia'] : null;
 }
 
 

@@ -36,6 +36,18 @@ $historico_agendamentos = function ($id_barbearia) use ($conn) {
 };
 
 
+$carregar_slides = function ($id_barbearia) use ($conn) {
+
+    $posiscao = 'slide';
+    $sql = 'SELECT * FROM imagem WHERE id_barbearia = ? AND posicao = ?';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('ss', $id_barbearia, $posicao);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+
 $editar_cadastro = function ($id_barbearia) use ($conn) {
 
     $nome_barbearia = filter_input(INPUT_POST, 'nome_barbearia');

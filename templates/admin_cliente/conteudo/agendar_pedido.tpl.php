@@ -86,6 +86,7 @@
         $params = resolve('/cliente/agendar_pedido/([a-z0-9]{1,100})/([a-z0-9]{1,100})/([a-z0-9]{1,100})/([0-9]{1,10})');
         $data_selecionada = $params[4];
         $r = true;
+        $r = 0;
 
         foreach($array_horarios as $inicio){
 
@@ -107,14 +108,18 @@
             if($j){ 
                 if($data_selecionada == date('Ymd') && $inicio < date('H:i:s')){ 
                     if($r) {?>
-                    <div class="mr-2 mb-2">
-                        Nenhum horário disponível, escolha outra data!
-                     </div>
+
                 <?php $r = false;}} else{ ?>
                 <div class="mr-2 mb-2">
                     <button onclick="mostrar_horario('<?php echo date('H:i:s', strtotime($inicio)); ?>', '<?php echo date('d/m/Y', strtotime($data_selecionada)); ?>')" value="<?php echo $inicio; ?>" class="btn btn-success"><?php echo date("H:i", strtotime($inicio)); ?></button>
                 </div>
-        <?php }}} ?>
+        <?php $r++; }
+            }
+        } if($r == 0) { ?>
+                    <div class="mr-2 mb-2">
+                        Nenhum horário disponível, escolha outra data!
+                     </div>
+       <?php } ?>
     </div>
 </div>
 

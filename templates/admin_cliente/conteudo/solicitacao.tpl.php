@@ -1,21 +1,29 @@
 <div class="p-2 text-center">
-    <h1><?php echo $data['dados_barbearia'][0]['nome_barbearia']; ?></h1>
-</div>
+    <div class="row p-3" style="background-color: #F6F6F6;">
+        <div class="col">
+            <img class="logo_barbearia" src="<?php echo $data_5['logo'][0]['caminho']; ?>" alt="">
 
+            <h1><?php echo $data['dados_barbearia'][0]['nome_barbearia']; ?></h1>
+        </div>
+    </div>
+</div>
+<hr>
 <div class="row h-auto">
+
 
     <div class="col-md-6">
         <div id="carouselExampleInterval" class="p-2 carousel slide w-100" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="1000">
-                <img src="/barbearia/public/img/imagem_01.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-interval="1000">
-                <img src="/barbearia/public/img/imagem_02.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-interval="1000">
-                <img src="/barbearia/public/img/imagem_03.jpg" class="d-block w-100" alt="...">
-            </div>
+            <?php $i = 0; foreach ($data_4['carregar_slides'] as $carregar_slides) : 
+            if($i < 1){ ?>
+                <div class="carousel-item active" data-interval="1000">
+                    <img src="<?php echo $carregar_slides['caminho']; ?>" style="height: -webkit-fill-available;" class="d-block w-100 justify-content-center" alt="...">
+                </div>
+            <?php }else{ ?>
+                <div class="carousel-item" data-interval="1000">
+                    <img src="<?php echo $carregar_slides['caminho']; ?>" style="height: -webkit-fill-available;" class="d-block w-100 justify-content-center" alt="...">
+                </div>
+            <?php }; $i++; endforeach; ?>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -74,6 +82,8 @@
 <!-- COMBOS DISPONÍVEIS -->
 
 <?php 
+
+// var_dump($data_5['logo']);
 
 foreach ($data_3['tipos_servicos'] as $tipos_servicos) : ?>
 <div class="categoria_serviços">

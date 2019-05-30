@@ -64,6 +64,26 @@ $unica_barbearia = function ($id_barbearia) use ($conn) {
 };
 
 
+$carregar_slides = function ($id_barbearia) use ($conn) {
+
+    $sql = 'SELECT * FROM imagem WHERE id_barbearia = ? AND posicao = "slide"';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $id_barbearia);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
+$logo = function ($id_barbearia) use ($conn) {
+
+    $sql = 'SELECT * FROM imagem WHERE id_barbearia = ? AND posicao = "logo"';
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $id_barbearia);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    return $resultado->fetch_all(MYSQLI_ASSOC);
+};
+
 $servicos_barbearia = function ($id_barbearia) use ($conn) {
 
     $sql = 'SELECT * FROM servico WHERE id_barbearia = ?';

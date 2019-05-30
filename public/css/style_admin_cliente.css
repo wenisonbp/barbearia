@@ -253,3 +253,20 @@ button{
 .solicitacao_agendamento{
     height: 100% !important;
 } */
+/* 
+.carousel-item{
+    height: 190px;
+} */
+
+.carousel-inner{
+    height: 300px;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.logo_barbearia{
+    height: 120px;
+}
+

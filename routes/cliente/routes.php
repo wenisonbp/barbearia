@@ -14,7 +14,9 @@ elseif ($params = resolve('/cliente/solicitacao/([a-z0-9]{1,100})/([a-z0-9]{1,10
     $dados_barbearia = $unica_barbearia($params[2]);
     $servicos_barbearia = $servicos_barbearia($params[2]);
     $tipos_servicos = $tipos_servicos($params[2]);
-    render('admin_cliente/conteudo/solicitacao', 'admin_cliente/index', ['dados_barbearia' => $dados_barbearia], ['servicos_barbearia' => $servicos_barbearia], ['tipos_servicos' => $tipos_servicos]);
+    $carregar_slides = $carregar_slides($params[2]);
+    $logo = $logo($params[2]);
+    render('admin_cliente/conteudo/solicitacao', 'admin_cliente/index', ['dados_barbearia' => $dados_barbearia], ['servicos_barbearia' => $servicos_barbearia], ['tipos_servicos' => $tipos_servicos], ['carregar_slides' => $carregar_slides], ['logo' => $logo]);
 }
 
 elseif ($params = resolve('/cliente/meus_agendamentos/([a-z0-9]{1,100})')) {
