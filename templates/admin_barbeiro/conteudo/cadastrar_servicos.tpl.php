@@ -13,7 +13,6 @@
             <div class="col-6">
                 <label class="font-weight-bold" for="">Tipo de serviço:</label>
                 <div class="form-group">
-                    <label for="tipo_servico">Example select</label>
                     <select class="form-control" id="exampleFormControlSelect1" name="tipo">
                     <option>Combo</option>
                     <option>Cabelo</option>
@@ -30,7 +29,7 @@
             <div class="col-6">
                 <label class="font-weight-bold" for="">Serviço:</label>
                 <div>
-                    <input type="email" class="form-control" name="servico" value="">
+                    <input type="text" class="form-control" name="servico" value="">
                 </div>
             </div>
         </div>
@@ -39,22 +38,13 @@
             <div class="col-10 col-md-6 mb-3">
                 <label class="font-weight-bold" for="">Tempo:</label>
                 <div>
-                    <input type="time" class="form-control" name="time" value="">
+                    <input type="time" class="form-control" name="tempo" value="">
                 </div>
             </div>
-            <div class="col-2 col-md-2 mb-3">
-                <label class="font-weight-bold" for="">N°:</label>
+            <div class="col-10 col-md-6 mb-3">
+                <label class="font-weight-bold" for="">Preço - R$:</label>
                 <div>
-                    <input type="text" class="form-control" name="num_endereco" value="">
-                </div>
-            </div>
-        </div>
-
-        <div class="row col-md-12">
-            <div class="col-4 col-md-4 mb-3">
-                <label class="font-weight-bold" for="">Preço:</label>
-                <div>
-                    <input type="text" class="form-control" name="cep" value="">
+                    <input type="text" class="form-control" name="preco" value="">
                 </div>
             </div>
         </div>

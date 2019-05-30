@@ -20,7 +20,9 @@ elseif ($params = resolve('/barbeiro/inicio/([a-z0-9]{1,100})/editar_cadastro'))
 }
 
 elseif ($params = resolve('/barbeiro/meus_servicos/([a-z0-9]{1,100})')) {
-    render('admin_barbeiro/conteudo/meus_servicos', 'admin_barbeiro/index');
+    $meus_servicos = $meus_servicos($params[1]);
+    $tipos_servicos = $tipos_servicos($params[1]);
+    render('admin_barbeiro/conteudo/meus_servicos', 'admin_barbeiro/index', ['tipos_servicos' => $tipos_servicos], ['meus_servicos' => $meus_servicos]);
 }
 
 elseif ($params = resolve('/barbeiro/editar_servico/([a-z0-9]{1,100})/([0-9]+)')) {
@@ -28,6 +30,11 @@ elseif ($params = resolve('/barbeiro/editar_servico/([a-z0-9]{1,100})/([0-9]+)')
 }
 
 elseif ($params = resolve('/barbeiro/cadastrar_servico/([a-z0-9]{1,100})')) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $cadastrar_servico($params[1]);
+        flash('Registro criado com sucesso!', 'success');
+        return header('location: /barbearia/barbeiro/meus_servicos/' . $params[1]);
+    }
     render('admin_barbeiro/conteudo/cadastrar_servicos', 'admin_barbeiro/index');
 }
 
